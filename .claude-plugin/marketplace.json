@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "arcsync",
+  "description": "ArcSync for Claude Code: generate architecture diagrams from Terraform, AWS CDK, CloudFormation, Pulumi, Azure ARM and Serverless Framework code, set up the ArcSync GitHub Action, and read what a pull request changes in your infrastructure.",
+  "owner": {
+    "name": "VanLandinghamLabs",
+    "url": "https://github.com/VanLandinghamLabs"
+  },
+  "plugins": [
+    {
+      "name": "arcsync",
+      "version": "0.1.0",
+      "source": "./plugins/arcsync",
+      "description": "Architecture diagrams from infrastructure-as-code, the ArcSync GitHub Action, and per-PR infra deltas.",
+      "homepage": "https://arcsync.dev",
+      "license": "MIT",
+      "keywords": [
+        "architecture",
+        "diagrams",
+        "terraform",
+        "cdk",
+        "cloudformation",
+        "pulumi",
+        "iac",
+        "aws"
+      ]
+    }
+  ]
+}
