@@ -11,46 +11,36 @@ Supported engines: Terraform (HCL), AWS CDK (TypeScript, JavaScript, Python, Jav
 
 Pick the procedure that matches the request.
 
-## 1. Diagram local IaC files, no account needed
+## 1. Set up the ArcSync GitHub Action
 
-For a quick Mermaid diagram of files on disk:
+This is the free path for CDK, Pulumi and Terraform, because the customer's CI does the build. CloudFormation, ARM and Serverless Framework have no build output to upload; use §3 for those. Two lanes:
 
-```bash
-npx @auto-arch-diagram/cli ./path/to/iac
-```
-
-Prints Mermaid markdown to stdout. Works for Terraform, CloudFormation, Azure ARM and Serverless Framework sources directly. For CDK or Pulumi, synthesize first (`cdk synth`, or `pulumi preview --save-plan plan.json`) and point the CLI at the output.
-
-## 2. Set up the ArcSync GitHub Action
-
-This is the free path for every engine, because the customer's CI does the build. Two lanes:
-
-- **App install (no secrets).** If the user can install the ArcSync GitHub App on the repository, installing it opens a pull request that adds the workflow with the correct `permissions:` block. Send them to `https://arcsync.dev/settings`. Nothing else to configure.
-- **Manual workflow.** Before writing any YAML, read `https://arcsync.dev/docs/github-action.md` — it carries the required `permissions:` block and the right `path:` for each engine. Two permission mistakes cannot be undone later: omitting `id-token: write` fails the upload, and omitting `contents: read` makes the backend treat a public repo as private and keeps its diagram out of the gallery.
+- **App install (no secrets).** If the user can install the ArcSync GitHub App on a CDK, Pulumi or Terraform repository, installing it opens a pull request that adds the workflow with the correct `permissions:` block. Send them to `https://arcsync.dev/settings`. Nothing else to configure.
+- **Manual workflow.** Before writing any YAML, read `https://arcsync.dev/docs/github-action.md` — it carries the required `permissions:` block and the right `path:` for each engine. Omitting `id-token: write` fails the upload. Keep `contents: read` too: the action reads repo metadata with it, and if the fallback lookup also fails, the backend treats the repo as private and keeps its diagram out of the gallery, which cannot be undone later.
 
 The workflow must run on `pull_request` **and** `push` to the default branch: the push keeps the base branch's diagram current, and that is what a pull request's infra delta diffs against.
 
-If the user is on non-GitHub CI, or the App cannot be installed on their org, they create an ArcSync CI credential at `https://arcsync.dev/settings` and store the secret with `gh secret set ARCSYNC_CLIENT_SECRET`, entered interactively. Never write the secret to a file, echo it, or put it in a commit.
+If the App cannot be installed on their org, they create an ArcSync CI credential at `https://arcsync.dev/settings` and store the secret with `gh secret set ARCSYNC_CLIENT_SECRET`, entered interactively. Never write the secret to a file, echo it, or put it in a commit. The job still needs `id-token: write`. The Action runs only on GitHub Actions, and other CI systems cannot upload a GitHub repository, so use §3 there.
 
 Use `VanLandinghamLabs/arcsync-action@v3`. Older majors are retired.
 
-## 3. Read a pull request's infra delta
+## 2. Read a pull request's infra delta
 
-On `pull_request` runs the Action's comment starts with an **Infra delta** block: a one-line summary such as "adds 1 RDS, removes 1 NAT Gateway, changes 2 Security Groups", then a table of added (➕), removed (➖) and changed (✏️) resources with their IaC ids, and a link into the canvas with the changes highlighted. When the base branch has never been diagrammed the block says so; the fix is a run on the base branch (see §2).
+On `pull_request` runs the Action's comment starts with an **Infra delta** block: a one-line summary such as "adds 1 RDS, removes 1 NAT Gateway, changes 2 Security Groups", then a table of added (➕), removed (➖) and changed (✏️) resources with their IaC ids, and a link into the canvas with the changes highlighted. When the base branch has never been diagrammed the block says so; the fix is a run on the base branch (see §1).
 
-The Action also exposes a `delta-status` output (`ok`, `no-base`, or `none` on non-PR runs) for workflows that want to gate on it.
+The Action also exposes a `delta-status` output (`ok`, `no-base`, or `none` when no delta came back, as on non-PR runs) for workflows that want to gate on it.
 
-Free accounts see the resource count and an upgrade link; the per-resource table, the summary sentence and the canvas highlight are Pro features.
+Free accounts see the resource count and an upgrade link; the per-resource table, the summary sentence and the canvas highlight are Pro and Team features.
 
-## 4. Generate a diagram from a Git repository through the API
+## 3. Generate a diagram from a Git repository through the API
 
-Requires an ArcSync account and an Auth0 bearer token; use this only when the CLI and the Action do not fit.
+Requires an ArcSync account and an Auth0 bearer token or MCP credential; use this only when the Action does not fit.
 
 1. `POST https://api.arcsync.dev/graphs/generate` with `{ "repoUrl": "https://github.com/owner/repo", "branch": "main" }`.
 2. Poll `GET /graphs/{graphId}/status` until it reports completion.
 3. Open `https://arcsync.dev/canvas/{graphId}` for the interactive diagram, or `https://arcsync.dev/markdown/{graphId}` for Mermaid.
 
-CDK and Pulumi projects are synthesized on ArcSync's servers on this path, which is metered separately from cheap parses (10 per month on the free tier). The Action does not consume that budget, because the user's CI does the synth.
+CDK and Pulumi projects are synthesized on ArcSync's servers on this path, which is metered separately from cheap parses (10 per month on the free tier). The Action does not consume that budget, because the user's CI does the synth. With **Re-parse on push** on for that diagram, a push to a paid workspace also runs a server synth.
 
 ## Reference
 
