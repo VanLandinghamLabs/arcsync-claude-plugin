@@ -40,7 +40,7 @@ Requires an ArcSync account and an Auth0 bearer token or MCP credential; use thi
 2. Poll `GET /graphs/{graphId}/status` until it reports completion.
 3. Open `https://arcsync.dev/canvas/{graphId}` for the interactive diagram, or `https://arcsync.dev/markdown/{graphId}` for Mermaid.
 
-CDK and Pulumi projects are synthesized on ArcSync's servers on this path, which is metered separately from cheap parses (10 per month on the free tier). The Action does not consume that budget, because the user's CI does the synth. With **Re-parse on push** on for that diagram, a push to a paid workspace also runs a server synth.
+CDK and Pulumi projects are synthesized on ArcSync's servers on this path, which is metered separately from cheap parses and is temporarily limited to paid plans. The Action does not consume that budget, because the user's CI does the synth. With **Re-parse on push** on for that diagram, a push to a paid workspace also runs a server synth.
 
 ## Reference
 
