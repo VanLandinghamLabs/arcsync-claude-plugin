@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "arcsync",
-      "version": "0.1.4",
+      "version": "0.1.5",
       "source": "./plugins/arcsync",
       "description": "Architecture diagrams from infrastructure-as-code, the ArcSync GitHub Action, and per-PR infra deltas.",
       "homepage": "https://arcsync.dev",
