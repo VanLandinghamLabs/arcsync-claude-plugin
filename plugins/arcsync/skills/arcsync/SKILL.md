@@ -56,14 +56,15 @@ Each resource is drawn as a card. Its title and its first line come from the IaC
 
 A tag named `Description` is not read, and neither is a CloudFormation value built by a function (`Fn::Sub`, `Fn::Join`). Write one plain sentence that says what the resource does for the system: "Resizes uploaded images and writes thumbnails to the media bucket", not "Lambda function" or a copy of its name. Leave out secrets, account ids and customer names: the text shows on the diagram, which may be public, and in the cloud console. IAM roles and policies are not drawn as cards.
 
-**Titles.** Where the title comes from depends on the engine:
+**Titles.** For CloudFormation, CDK, Terraform and Pulumi, the title is the first of these the resource has:
 
-- CloudFormation and CDK: an explicit name property when the resource sets one (`FunctionName`, `TableName`, `BucketName`), otherwise the CDK construct id or the CloudFormation logical id.
-- Terraform: the block label (`aws_lambda_function.order_workflow` is titled `order_workflow`).
-- Pulumi: the resource name, the first argument to its constructor.
-- ARM: the resource's `name`. Serverless Framework: the function's key.
+1. `arcsync:title`, a title set for the diagram. In CloudFormation and CDK it is resource `Metadata` (in CDK, `addMetadata("arcsync:title", "...")` on the construct's `node.defaultChild`). In Terraform and Pulumi it is a tag written as a plain map on the resource: `tags = { "arcsync:title" = "..." }`. It is not read from a `merge(...)` expression in Terraform source, from an `aws-native` tag list, or from GCP labels.
+2. The resource's own name when the IaC writes it out: `FunctionName`, `TableName` or `BucketName` in CloudFormation; `name` in Terraform and Pulumi, or `function_name` on a Lambda and `bucket` on an S3 bucket. A Terraform name built from a reference (`"${var.env}-api"`) is not read from source, and neither is a name Pulumi generated.
+3. The CDK construct id, the CloudFormation logical id, the Terraform block label (`aws_lambda_function.order_workflow` is titled `order_workflow`) or the Pulumi resource name.
 
-For a **new** resource, choose an id that names its role: `OrderWorkflow`, not `Fn2`. Do not add a physical name only to get a title.
+ARM uses the resource's `name`, and Serverless Framework the function's key.
+
+To retitle a resource that is **already deployed**, set `arcsync:title`: metadata and tags change in place. For a **new** resource, choose an id that names its role: `OrderWorkflow`, not `Fn2`. Do not add a physical name only to get a title.
 
 **Never replace a resource to improve a label.** These rules outrank a clearer diagram:
 
