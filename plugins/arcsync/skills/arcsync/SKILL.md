@@ -9,6 +9,8 @@ ArcSync turns infrastructure-as-code into architecture diagrams: an interactive 
 
 Supported engines: Terraform (HCL), AWS CDK (TypeScript, JavaScript, Python, Java, Go, C#), CloudFormation (single and multi-stack), Pulumi, Azure ARM, and Serverless Framework. Bicep is not supported.
 
+This plugin also installs the ArcSync MCP server. When its tools are available, use the arcsync-mcp skill to read a repository's diagram, a resource, a pull request's delta or to start a parse, and the arcsync-diagrams skill to draw a new diagram for a document. The procedures below cover setup, the Action, and the API path for when those tools are not available.
+
 Pick the procedure that matches the request.
 
 ## 1. Set up the ArcSync GitHub Action
