@@ -1,7 +1,7 @@
 {
   "name": "arcsync",
   "description": "Architecture diagrams from Terraform, AWS CDK, CloudFormation, Pulumi, Azure ARM and Serverless Framework code; the ArcSync GitHub Action; per-PR infra deltas.",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "author": {
     "name": "VanLandinghamLabs",
     "url": "https://github.com/VanLandinghamLabs"
