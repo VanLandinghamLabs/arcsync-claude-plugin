@@ -1,0 +1,106 @@
+import { consumersOf, eventsFromFilter, firstBlock, subscriptionBase } from "./context.mjs";
+import { resolveTfRef, stringValues } from "./refs.mjs";
+import { deriveEventNames, parseSqlFilter } from "../filterExpr.mjs";
+//#region ../core/dist/graph/eventFlows/azure.js
+/**
+* Azure event derivations: Event Grid subscription filters and Service Bus
+* subscription rules (SQL filters).
+*/
+function armIncludedEventTypes(attrs) {
+	const filter = attrs.filter;
+	if (filter == null || typeof filter !== "object" || Array.isArray(filter)) return null;
+	return stringValues(filter.includedEventTypes);
+}
+function armSubjectFilter(filter) {
+	const out = {};
+	if (typeof filter.subjectBeginsWith === "string") out.subjectBeginsWith = filter.subjectBeginsWith;
+	if (typeof filter.subjectEndsWith === "string") out.subjectEndsWith = filter.subjectEndsWith;
+	return Object.keys(out).length > 0 ? out : null;
+}
+function deriveFromEventGridSubscription(sub, { nodeIds, containsParent, neighbors }) {
+	const attrs = sub.attributes;
+	const isTf = sub.resourceType === "azurerm_eventgrid_event_subscription";
+	const eventTypes = isTf ? stringValues(attrs.included_event_types) : armIncludedEventTypes(attrs);
+	if (!eventTypes) return [];
+	let busId;
+	let subjectFilter;
+	if (isTf) {
+		const busRef = resolveTfRef(attrs.scope) ?? resolveTfRef(attrs.topic_id);
+		busId = busRef && nodeIds.has(busRef) ? busRef : null;
+		subjectFilter = attrs.subject_filter;
+	} else {
+		busId = containsParent.get(sub.id) ?? null;
+		subjectFilter = armSubjectFilter(attrs.filter);
+	}
+	const base = subscriptionBase(sub.id, busId, "azure", neighbors);
+	return eventTypes.map((v) => ({
+		...base,
+		name: v,
+		attributes: {
+			eventType: v,
+			...subjectFilter !== void 0 && subjectFilter !== null ? { subjectFilter } : {}
+		}
+	}));
+}
+function sqlExpressionOf(attrs, isTf) {
+	if (isTf) return typeof attrs.sql_filter === "string" ? attrs.sql_filter : null;
+	const expr = firstBlock(attrs.sqlFilter)?.sqlExpression;
+	return typeof expr === "string" ? expr : null;
+}
+function deriveFromServiceBusRule(rule, { nodeIds, containsParent, subTopicOf, neighbors }) {
+	const attrs = rule.attributes;
+	const isTf = rule.resourceType === "azurerm_servicebus_subscription_rule";
+	const rawSubId = isTf ? resolveTfRef(attrs.subscription_id) : containsParent.get(rule.id) ?? null;
+	const subId = rawSubId && nodeIds.has(rawSubId) ? rawSubId : null;
+	const topicRef = subId ? subTopicOf(subId) : null;
+	const topicId = topicRef && nodeIds.has(topicRef) ? topicRef : null;
+	const base = {
+		busId: topicId,
+		targets: subId ? consumersOf(subId, /* @__PURE__ */ new Set([
+			rule.id,
+			subId,
+			topicId
+		]), neighbors) : [],
+		absorbedIds: subId ? [rule.id, subId] : [rule.id],
+		derivedFrom: rule.id,
+		provider: "azure"
+	};
+	const correlation = firstBlock(isTf ? attrs.correlation_filter : attrs.correlationFilter);
+	if (correlation) {
+		const label = correlation.label;
+		if (typeof label === "string") return [{
+			...base,
+			name: label,
+			attributes: {
+				eventType: label,
+				filter: correlation
+			}
+		}];
+		const properties = firstBlock(correlation.properties);
+		const propKeys = properties ? Object.keys(properties) : [];
+		if (propKeys.length === 1 && typeof properties?.[propKeys[0]] === "string") {
+			const value = properties[propKeys[0]];
+			return [{
+				...base,
+				name: value,
+				attributes: {
+					eventType: value,
+					filter: correlation
+				}
+			}];
+		}
+		return [{
+			...base,
+			name: `${rule.name} filter`,
+			attributes: { filter: correlation }
+		}];
+	}
+	const sqlExpr = sqlExpressionOf(attrs, isTf);
+	if (sqlExpr) {
+		const ast = parseSqlFilter(sqlExpr);
+		return eventsFromFilter(sqlExpr, ast ? deriveEventNames(ast) : null, base, rule.name);
+	}
+	return [];
+}
+//#endregion
+export { armIncludedEventTypes, armSubjectFilter, deriveFromEventGridSubscription, deriveFromServiceBusRule, sqlExpressionOf };
