@@ -1,7 +1,7 @@
-import { parseAnyDef } from "./any.mjs";
-import { parseRecordDef } from "./record.mjs";
 import { parseDef } from "../parseDef.mjs";
-//#region ../../node_modules/.pnpm/zod-to-json-schema@3.25.2_zod@4.6.7/node_modules/zod-to-json-schema/dist/esm/parsers/map.js
+import { parseRecordDef } from "./record.mjs";
+import { parseAnyDef } from "./any.mjs";
+// ../../node_modules/.pnpm/zod-to-json-schema@3.25.2_zod@4.6.7/node_modules/zod-to-json-schema/dist/esm/parsers/map.js
 function parseMapDef(def, refs) {
 	if (refs.mapStrategy === "record") return parseRecordDef(def, refs);
 	return {
@@ -31,5 +31,4 @@ function parseMapDef(def, refs) {
 		}
 	};
 }
-//#endregion
 export { parseMapDef };

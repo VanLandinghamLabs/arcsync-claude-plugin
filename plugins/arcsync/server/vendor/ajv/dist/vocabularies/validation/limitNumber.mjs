@@ -1,6 +1,6 @@
 import { __commonJSMin } from "../../../../../_virtual/_rolldown/runtime.mjs";
 import { require_codegen } from "../../compile/codegen/index.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/vocabularies/validation/limitNumber.js
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/vocabularies/validation/limitNumber.js
 var require_limitNumber = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	var codegen_1 = require_codegen();
@@ -42,6 +42,5 @@ var require_limitNumber = /* @__PURE__ */ __commonJSMin(((exports) => {
 		}
 	};
 }));
-//#endregion
 export default require_limitNumber();
 export { require_limitNumber };

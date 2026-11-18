@@ -1,9 +1,9 @@
 import { __commonJSMin } from "../../../../../_virtual/_rolldown/runtime.mjs";
+import { require_dataType } from "../../compile/validate/dataType.mjs";
 import { require_codegen } from "../../compile/codegen/index.mjs";
 import { require_util } from "../../compile/util.mjs";
-import { require_dataType } from "../../compile/validate/dataType.mjs";
 import { require_equal } from "../../runtime/equal.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/vocabularies/validation/uniqueItems.js
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/vocabularies/validation/uniqueItems.js
 var require_uniqueItems = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	var dataType_1 = require_dataType();
@@ -65,6 +65,5 @@ var require_uniqueItems = /* @__PURE__ */ __commonJSMin(((exports) => {
 		}
 	};
 }));
-//#endregion
 export default require_uniqueItems();
 export { require_uniqueItems };

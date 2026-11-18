@@ -1,4 +1,4 @@
-//#region ../core/dist/graph/iamActionClassifier.js
+// ../core/dist/graph/iamActionClassifier.js
 /**
 * Data-plane actions only: management and metadata actions (`s3:CreateBucket`,
 * `sqs:GetQueueAttributes`, `kinesis:ListShards`) are left out because CDK's
@@ -153,5 +153,4 @@ function combinedIamAccess(access) {
 	for (const value of access.values()) combined = mergeIamAccess(combined ?? void 0, value);
 	return combined;
 }
-//#endregion
 export { classifyIamAccess, combinedIamAccess, mergeIamAccess };

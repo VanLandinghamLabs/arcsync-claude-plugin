@@ -1,6 +1,6 @@
 import { randomBytes, timingSafeEqual } from "node:crypto";
 import { createServer } from "node:http";
-//#region src/login.ts
+// src/login.ts
 var LOGIN_TIMEOUT_MS = 6e5;
 var MAX_BODY_BYTES = 4096;
 var CLIENT_ID = /^arc_[A-Za-z0-9_-]{8,200}$/;
@@ -121,5 +121,4 @@ function startLoopbackLogin(opts) {
 		});
 	});
 }
-//#endregion
 export { LOGIN_TIMEOUT_MS, connectLabel, startLoopbackLogin };

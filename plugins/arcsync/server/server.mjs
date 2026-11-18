@@ -1,8 +1,8 @@
 import { McpServer } from "./vendor/@modelcontextprotocol/sdk/dist/esm/server/mcp.mjs";
 import { version } from "./package.json.mjs";
-import { TOOLS } from "./tools.mjs";
 import { AUTHORING_TOOLS } from "./authoringTools.mjs";
-//#region src/server.ts
+import { TOOLS } from "./tools.mjs";
+// src/server.ts
 var INSTRUCTIONS = `ArcSync parses infrastructure-as-code (Terraform, CloudFormation, AWS CDK, Pulumi, Azure ARM, Serverless Framework) into architecture diagrams. Use these tools instead of inferring architecture from source files:
 - list_diagrams finds the graphId for a repository; get_diagram returns it as Mermaid (or JSON) with a canvas link.
 - describe_resource explains one resource and its relationships.
@@ -47,5 +47,4 @@ function createServer(ctx) {
 	for (const tool of [...TOOLS, ...AUTHORING_TOOLS]) register(server, ctx, tool);
 	return server;
 }
-//#endregion
 export { createServer };

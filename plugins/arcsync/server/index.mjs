@@ -3,7 +3,7 @@ import { buildServerApi, runCommand } from "./cli.mjs";
 import { createServer } from "./server.mjs";
 import { spawn } from "node:child_process";
 import { homedir, hostname } from "node:os";
-//#region src/index.ts
+// src/index.ts
 var deps = {
 	env: process.env,
 	platform: process.platform,
@@ -26,4 +26,3 @@ try {
 	console.error(`arcsync-mcp: ${err instanceof Error ? err.message : String(err)}`);
 	process.exit(1);
 }
-//#endregion

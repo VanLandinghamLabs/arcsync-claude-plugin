@@ -1,5 +1,5 @@
 import "../graph/stateMachine.mjs";
-//#region ../core/dist/authoring/stateToAsl.js
+// ../core/dist/authoring/stateToAsl.js
 /** `[*]` can never be a state id, so it doubles as the "end of this region" target. */
 var END = "[*]";
 var START = "[*]";
@@ -268,11 +268,16 @@ var stateAstToAsl = (ast, blockId, diags) => {
 				Type: "Choice",
 				...rules(def, list)
 			};
-			States[id] = {
-				...shape,
-				...def.label === void 0 ? {} : { ArcSyncLabel: def.label },
-				...def.description.length > 0 ? { Comment: def.description.join("\n") } : {}
-			};
+			Object.defineProperty(States, id, {
+				value: {
+					...shape,
+					...def.label === void 0 ? {} : { ArcSyncLabel: def.label },
+					...def.description.length > 0 ? { Comment: def.description.join("\n") } : {}
+				},
+				enumerable: true,
+				writable: true,
+				configurable: true
+			});
 		}
 		return {
 			StartAt: startAt,
@@ -303,5 +308,4 @@ var stateAstToAsl = (ast, blockId, diags) => {
 	}
 	return emitRegion(infoOf.get(ast.root), 0);
 };
-//#endregion
 export { stateAstToAsl };

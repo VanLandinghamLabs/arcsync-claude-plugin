@@ -2,7 +2,7 @@ import { __commonJSMin } from "../../../../../_virtual/_rolldown/runtime.mjs";
 import { require_codegen } from "../../compile/codegen/index.mjs";
 import { require_util } from "../../compile/util.mjs";
 import { require_equal } from "../../runtime/equal.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/vocabularies/validation/const.js
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/vocabularies/validation/const.js
 var require_const = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	var codegen_1 = require_codegen();
@@ -22,6 +22,5 @@ var require_const = /* @__PURE__ */ __commonJSMin(((exports) => {
 		}
 	};
 }));
-//#endregion
 export default require_const();
 export { require_const };

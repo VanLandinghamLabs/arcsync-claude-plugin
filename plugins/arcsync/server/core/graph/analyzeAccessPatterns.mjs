@@ -1,7 +1,8 @@
-import { EdgeType, ResourceType } from "./types.mjs";
 import { createEdgeIdMinter } from "./edgeIds.mjs";
+import { resolveTfRef } from "./eventFlows/refs.mjs";
 import { classifyIamAccess, combinedIamAccess } from "./iamActionClassifier.mjs";
-//#region ../core/dist/graph/analyzeAccessPatterns.js
+import { EdgeType, ResourceType } from "./types.mjs";
+// ../core/dist/graph/analyzeAccessPatterns.js
 var DATA_STORE_TYPES = /* @__PURE__ */ new Set([
 	ResourceType.DYNAMODB_TABLE,
 	ResourceType.RDS_INSTANCE,
@@ -83,6 +84,21 @@ function classificationToDirection(classification, isDataStore) {
 	if (classification === "read") return "reverse";
 	return "bidirectional";
 }
+var isIdChar = (c) => c !== void 0 && /[\w-]/.test(c);
+function containsToken(haystack, token) {
+	if (token === "") return false;
+	for (let i = haystack.indexOf(token); i !== -1; i = haystack.indexOf(token, i + 1)) if (!isIdChar(haystack[i - 1]) && !isIdChar(haystack[i + token.length])) return true;
+	return false;
+}
+/** The one server whose node id or name appears in `value` as a whole token,
+* so `primary` never matches inside `primary_dr`; undefined when none or
+* several do. */
+function soleTokenMatch(value, servers) {
+	if (typeof value !== "string") return void 0;
+	const matches = /* @__PURE__ */ new Set();
+	for (const [name, id] of servers) if (containsToken(value, id) || containsToken(value, name)) matches.add(id);
+	return matches.size === 1 ? [...matches][0] : void 0;
+}
 /**
 * Detect GCP and Azure containment/reference relationships by scanning node attributes.
 * Returns additional edges to be merged into the graph.
@@ -109,6 +125,11 @@ function detectCloudRelationships(graph) {
 	const azureSqlServers = /* @__PURE__ */ new Map();
 	const azureResourceGroups = /* @__PURE__ */ new Map();
 	const gcpPubsubTopics = /* @__PURE__ */ new Map();
+	const nodeTypes = new Map(graph.nodes.map((n) => [n.id, n.type]));
+	const refTo = (value, type) => {
+		const id = resolveTfRef(value);
+		return id !== null && nodeTypes.get(id) === type ? id : void 0;
+	};
 	for (const node of graph.nodes) if (node.type === ResourceType.GCP_COMPUTE_NETWORK) gcpNetworks.set(node.name, node.id);
 	else if (node.type === ResourceType.AZURE_VIRTUAL_NETWORK) azureVnets.set(node.name, node.id);
 	else if (node.type === ResourceType.AZURE_SQL_SERVER) azureSqlServers.set(node.name, node.id);
@@ -121,35 +142,35 @@ function detectCloudRelationships(graph) {
 		if (node.type === ResourceType.GCP_COMPUTE_SUBNETWORK) {
 			const network = node.attributes.network;
 			if (network) {
-				const networkId = gcpNetworks.get(network);
+				const networkId = refTo(network, ResourceType.GCP_COMPUTE_NETWORK) ?? gcpNetworks.get(network);
 				if (networkId) addEdgeIfNew(networkId, node.id, EdgeType.CONTAINS);
 			}
 		}
 		if (node.type === ResourceType.GCP_PUBSUB_SUBSCRIPTION) {
 			const topic = node.attributes.topic;
 			if (topic) {
-				const topicId = gcpPubsubTopics.get(topic);
+				const topicId = refTo(topic, ResourceType.GCP_PUBSUB_TOPIC) ?? gcpPubsubTopics.get(topic);
 				if (topicId) addEdgeIfNew(node.id, topicId, EdgeType.REFERENCE);
 			}
 		}
 		if (node.type === ResourceType.AZURE_SUBNET) {
 			const vnetName = node.attributes.virtual_network_name;
 			if (vnetName) {
-				const vnetId = azureVnets.get(vnetName);
+				const vnetId = refTo(vnetName, ResourceType.AZURE_VIRTUAL_NETWORK) ?? azureVnets.get(vnetName);
 				if (vnetId) addEdgeIfNew(vnetId, node.id, EdgeType.CONTAINS);
 			}
 		}
 		if (node.type === ResourceType.AZURE_SQL_DATABASE) {
 			const serverId = node.attributes.server_id;
 			if (serverId) {
-				const serverNodeId = azureSqlServers.get(serverId) ?? [...azureSqlServers.values()].find((id) => serverId.includes(id)) ?? [...azureSqlServers.entries()].find(([name]) => serverId.includes(name))?.[1];
+				const serverNodeId = refTo(serverId, ResourceType.AZURE_SQL_SERVER) ?? azureSqlServers.get(serverId) ?? soleTokenMatch(serverId, azureSqlServers);
 				if (serverNodeId) addEdgeIfNew(serverNodeId, node.id, EdgeType.CONTAINS);
 			}
 		}
 		if (node.type !== ResourceType.AZURE_RESOURCE_GROUP) {
 			const rgName = node.attributes.resource_group_name;
 			if (rgName) {
-				const rgId = azureResourceGroups.get(rgName);
+				const rgId = refTo(rgName, ResourceType.AZURE_RESOURCE_GROUP) ?? azureResourceGroups.get(rgName);
 				if (rgId) addEdgeIfNew(rgId, node.id, EdgeType.CONTAINS);
 			}
 		}
@@ -201,5 +222,4 @@ function analyzeAccessPatterns(graph) {
 		edges
 	};
 }
-//#endregion
 export { DATA_STORE_TYPES, MESSAGING_TYPES, analyzeAccessPatterns, classifyIamActions, classifyLabel, classifyLambdaSource };

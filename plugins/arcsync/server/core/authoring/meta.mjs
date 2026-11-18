@@ -1,4 +1,4 @@
-//#region ../core/dist/authoring/meta.js
+// ../core/dist/authoring/meta.js
 var MAX_DEPTH = 32;
 var IDENT_START = /[A-Za-z_$]/;
 var IDENT_PART = /[A-Za-z0-9_$-]/;
@@ -126,5 +126,4 @@ var parseMeta = (text, at, diags) => {
 		return;
 	}
 };
-//#endregion
 export { parseMeta };

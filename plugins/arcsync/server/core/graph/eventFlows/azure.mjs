@@ -1,7 +1,7 @@
+import { deriveEventNames, parseSqlFilter } from "../filterExpr.mjs";
 import { consumersOf, eventsFromFilter, firstBlock, subscriptionBase } from "./context.mjs";
 import { resolveTfRef, stringValues } from "./refs.mjs";
-import { deriveEventNames, parseSqlFilter } from "../filterExpr.mjs";
-//#region ../core/dist/graph/eventFlows/azure.js
+// ../core/dist/graph/eventFlows/azure.js
 /**
 * Azure event derivations: Event Grid subscription filters and Service Bus
 * subscription rules (SQL filters).
@@ -102,5 +102,4 @@ function deriveFromServiceBusRule(rule, { nodeIds, containsParent, subTopicOf, n
 	}
 	return [];
 }
-//#endregion
 export { armIncludedEventTypes, armSubjectFilter, deriveFromEventGridSubscription, deriveFromServiceBusRule, sqlExpressionOf };

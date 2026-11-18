@@ -1,5 +1,5 @@
 import { __commonJSMin } from "../../../../_virtual/_rolldown/runtime.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/compile/rules.js
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/compile/rules.js
 var require_rules = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.getRules = exports.isJSONType = void 0;
@@ -56,6 +56,5 @@ var require_rules = /* @__PURE__ */ __commonJSMin(((exports) => {
 	}
 	exports.getRules = getRules;
 }));
-//#endregion
 export default require_rules();
 export { require_rules };

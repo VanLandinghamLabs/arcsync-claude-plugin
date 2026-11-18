@@ -1,6 +1,6 @@
-import { EdgeType } from "./types.mjs";
 import "./syntheticStateId.mjs";
-//#region ../core/dist/graph/containment.js
+import { EdgeType } from "./types.mjs";
+// ../core/dist/graph/containment.js
 /** Resolves `graph`'s `CONTAINS` edges under the rule documented on
 * {@link Containment}. Edge order is the tie-break, so callers that mint
 * edges control which parent wins by where they append. */
@@ -41,5 +41,4 @@ function containerChildSetsOf(containment) {
 	for (const id of containment.hasChildren) containers.set(id, new Set(containment.childrenOf.get(id) ?? []));
 	return containers;
 }
-//#endregion
 export { containerChildSets, containerChildSetsOf, resolveContainment };

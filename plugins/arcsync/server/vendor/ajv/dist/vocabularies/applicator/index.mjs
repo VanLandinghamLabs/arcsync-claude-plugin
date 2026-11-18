@@ -1,7 +1,7 @@
 import { __commonJSMin } from "../../../../../_virtual/_rolldown/runtime.mjs";
 import { require_additionalItems } from "./additionalItems.mjs";
-import { require_items } from "./items.mjs";
 import { require_prefixItems } from "./prefixItems.mjs";
+import { require_items } from "./items.mjs";
 import { require_items2020 } from "./items2020.mjs";
 import { require_contains } from "./contains.mjs";
 import { require_dependencies } from "./dependencies.mjs";
@@ -15,7 +15,7 @@ import { require_oneOf } from "./oneOf.mjs";
 import { require_allOf } from "./allOf.mjs";
 import { require_if } from "./if.mjs";
 import { require_thenElse } from "./thenElse.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/vocabularies/applicator/index.js
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/vocabularies/applicator/index.js
 var require_applicator = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	var additionalItems_1 = require_additionalItems();
@@ -55,6 +55,5 @@ var require_applicator = /* @__PURE__ */ __commonJSMin(((exports) => {
 	}
 	exports.default = getApplicator;
 }));
-//#endregion
 export default require_applicator();
 export { require_applicator };

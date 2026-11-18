@@ -1,7 +1,7 @@
 import { __toESM } from "../../../../../../_virtual/_rolldown/runtime.mjs";
 import { require_ajv } from "../../../../../ajv/dist/ajv.mjs";
 import { require_dist } from "../../../../../ajv-formats/dist/index.mjs";
-//#region ../../node_modules/.pnpm/@modelcontextprotocol+sdk@1.32.2_supports-color@7.2.0_zod@4.6.7/node_modules/@modelcontextprotocol/sdk/dist/esm/validation/ajv-provider.js
+// ../../node_modules/.pnpm/@modelcontextprotocol+sdk@1.32.2_supports-color@7.2.0_zod@4.6.7/node_modules/@modelcontextprotocol/sdk/dist/esm/validation/ajv-provider.js
 var import_ajv = /* @__PURE__ */ __toESM(require_ajv(), 1);
 var import_dist = /* @__PURE__ */ __toESM(require_dist(), 1);
 function createDefaultAjvInstance() {
@@ -76,5 +76,4 @@ var AjvJsonSchemaValidator = class {
 		};
 	}
 };
-//#endregion
 export { AjvJsonSchemaValidator };

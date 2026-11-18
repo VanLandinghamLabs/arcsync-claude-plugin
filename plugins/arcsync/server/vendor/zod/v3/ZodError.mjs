@@ -1,5 +1,5 @@
 import { util } from "./helpers/util.mjs";
-//#region ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v3/ZodError.js
+// ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v3/ZodError.js
 var ZodIssueCode = util.arrayToEnum([
 	"invalid_type",
 	"invalid_literal",
@@ -108,5 +108,4 @@ var ZodError = class ZodError extends Error {
 ZodError.create = (issues) => {
 	return new ZodError(issues);
 };
-//#endregion
 export { ZodError, ZodIssueCode };

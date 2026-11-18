@@ -1,6 +1,6 @@
-import { jsonStringifyReplacer } from "./util.mjs";
 import { $constructor } from "./core.mjs";
-//#region ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v4/core/errors.js
+import { jsonStringifyReplacer } from "./util.mjs";
+// ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v4/core/errors.js
 function _getMessage() {
 	const internals = this._zod;
 	internals.message ?? (internals.message = JSON.stringify(internals.def, jsonStringifyReplacer, 2));
@@ -115,5 +115,4 @@ function formatError(error, mapper = (issue) => issue.message) {
 	processError(error);
 	return fieldErrors;
 }
-//#endregion
 export { $ZodError, $ZodRealError, flattenError, formatError };

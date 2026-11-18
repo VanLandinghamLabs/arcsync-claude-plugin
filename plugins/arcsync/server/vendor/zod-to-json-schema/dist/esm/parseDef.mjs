@@ -1,8 +1,8 @@
 import { ignoreOverride } from "./Options.mjs";
+import { selectParser } from "./selectParser.mjs";
 import { getRelativePath } from "./getRelativePath.mjs";
 import { parseAnyDef } from "./parsers/any.mjs";
-import { selectParser } from "./selectParser.mjs";
-//#region ../../node_modules/.pnpm/zod-to-json-schema@3.25.2_zod@4.6.7/node_modules/zod-to-json-schema/dist/esm/parseDef.js
+// ../../node_modules/.pnpm/zod-to-json-schema@3.25.2_zod@4.6.7/node_modules/zod-to-json-schema/dist/esm/parseDef.js
 function parseDef(def, refs, forceResolution = false) {
 	const seenItem = refs.seen.get(def);
 	if (refs.override) {
@@ -50,5 +50,4 @@ var addMeta = (def, refs, jsonSchema) => {
 	}
 	return jsonSchema;
 };
-//#endregion
 export { parseDef };

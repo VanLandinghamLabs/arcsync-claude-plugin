@@ -1,8 +1,8 @@
-import { EdgeType, ResourceType } from "./types.mjs";
-import { lookupByType } from "./typeLookup.mjs";
 import { FOLD_VERBS } from "./edgeSemantics.mjs";
 import { fallbackRailFor, namesNode, railLabelFor, readAttribute, readAttributeEntry, readString, referenceToken } from "./fallbackRail.mjs";
-//#region ../core/dist/graph/foldNetworkGlue.js
+import { lookupByType } from "./typeLookup.mjs";
+import { EdgeType, ResourceType } from "./types.mjs";
+// ../core/dist/graph/foldNetworkGlue.js
 /**
 * Folds a networking "join" resource into the node that owns it.
 *
@@ -711,5 +711,4 @@ function naclEntryRail(entry, attributes, egress, peerName) {
 		order: (egress ? 1e5 : 0) + (Number.isInteger(rank) ? rank : 65536)
 	};
 }
-//#endregion
 export { PULUMI_UNKNOWN, foldNetworkGlue };

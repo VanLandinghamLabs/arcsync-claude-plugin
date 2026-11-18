@@ -1,6 +1,6 @@
 import { __commonJSMin } from "../../../../../_virtual/_rolldown/runtime.mjs";
 import { require_util } from "../../compile/util.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/vocabularies/applicator/not.js
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/vocabularies/applicator/not.js
 var require_not = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	var util_1 = require_util();
@@ -26,6 +26,5 @@ var require_not = /* @__PURE__ */ __commonJSMin(((exports) => {
 		error: { message: "must NOT be valid" }
 	};
 }));
-//#endregion
 export default require_not();
 export { require_not };

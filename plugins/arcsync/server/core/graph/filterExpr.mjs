@@ -1,4 +1,4 @@
-//#region ../core/dist/graph/filterExpr.js
+// ../core/dist/graph/filterExpr.js
 var ParseFail = class extends Error {};
 function tokenizeCel(src) {
 	const tokens = [];
@@ -353,5 +353,4 @@ function deriveEventNames(ast) {
 		summarized: false
 	};
 }
-//#endregion
 export { deriveEventNames, parseCelFilter, parseSqlFilter };

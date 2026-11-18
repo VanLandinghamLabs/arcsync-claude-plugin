@@ -1,6 +1,6 @@
 import { __commonJSMin } from "../../../../_virtual/_rolldown/runtime.mjs";
 import { require_resolve } from "./resolve.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/compile/ref_error.js
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/compile/ref_error.js
 var require_ref_error = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	var resolve_1 = require_resolve();
@@ -13,6 +13,5 @@ var require_ref_error = /* @__PURE__ */ __commonJSMin(((exports) => {
 	};
 	exports.default = MissingRefError;
 }));
-//#endregion
 export default require_ref_error();
 export { require_ref_error };

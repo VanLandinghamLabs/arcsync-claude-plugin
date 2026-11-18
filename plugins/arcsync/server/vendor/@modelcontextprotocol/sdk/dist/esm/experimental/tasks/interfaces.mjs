@@ -1,4 +1,4 @@
-//#region ../../node_modules/.pnpm/@modelcontextprotocol+sdk@1.32.2_supports-color@7.2.0_zod@4.6.7/node_modules/@modelcontextprotocol/sdk/dist/esm/experimental/tasks/interfaces.js
+// ../../node_modules/.pnpm/@modelcontextprotocol+sdk@1.32.2_supports-color@7.2.0_zod@4.6.7/node_modules/@modelcontextprotocol/sdk/dist/esm/experimental/tasks/interfaces.js
 /**
 * Experimental task interfaces for MCP SDK.
 * WARNING: These APIs are experimental and may change without notice.
@@ -14,5 +14,4 @@
 function isTerminal(status) {
 	return status === "completed" || status === "failed" || status === "cancelled";
 }
-//#endregion
 export { isTerminal };

@@ -1,4 +1,4 @@
-//#region ../core/dist/graph/fallbackRail.js
+// ../core/dist/graph/fallbackRail.js
 /**
 * Attribute keys that name a CloudWatch log group rather than a queue or a
 * function. A log group is hidden as a node and leaves its name on its owner's
@@ -142,5 +142,4 @@ function referenceToken(value) {
 function namesNode(token, node) {
 	return node.id === token || node.id.endsWith(`/${token}`) || node.id.endsWith(`.${token}`) || node.name === token;
 }
-//#endregion
 export { FALLBACK_KEYS, FALLBACK_LOG_KEYS, fallbackRailFor, isFallbackProperty, namesNode, normalizeKey, railLabelFor, readAttribute, readAttributeEntry, readString, referenceToken };

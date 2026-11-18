@@ -1,7 +1,7 @@
 import { ResourceType } from "../types.mjs";
 import { consumersOf, soleNeighborOfType } from "./context.mjs";
 import { parsePattern, resolveTfRef, scopedCfnRef, stringValues } from "./refs.mjs";
-//#region ../core/dist/graph/eventFlows/aws.js
+// ../core/dist/graph/eventFlows/aws.js
 /**
 * AWS event derivations: EventBridge rules (CloudFormation and Terraform
 * spellings) and SNS subscription filter policies.
@@ -105,5 +105,4 @@ function deriveFromSnsSubscription(sub, { nodeIds, neighbors, nodesById }) {
 		attributes: { filterPolicy: policy }
 	}];
 }
-//#endregion
 export { deriveFromCfnRule, deriveFromSnsSubscription, deriveFromTfRule };

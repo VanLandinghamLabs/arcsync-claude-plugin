@@ -1,7 +1,7 @@
 import { __commonJSMin } from "../../../../../_virtual/_rolldown/runtime.mjs";
 import { require_code } from "./code.mjs";
 import { require_scope } from "./scope.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/compile/codegen/index.js
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/compile/codegen/index.js
 var require_codegen = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.or = exports.and = exports.not = exports.CodeGen = exports.operators = exports.varKinds = exports.ValueScopeName = exports.ValueScope = exports.Scope = exports.Name = exports.regexpCode = exports.stringify = exports.getProperty = exports.nil = exports.strConcat = exports.str = exports._ = void 0;
@@ -669,6 +669,5 @@ var require_codegen = /* @__PURE__ */ __commonJSMin(((exports) => {
 		return x instanceof code_1.Name ? x : (0, code_1._)`(${x})`;
 	}
 }));
-//#endregion
 export default require_codegen();
 export { require_codegen };

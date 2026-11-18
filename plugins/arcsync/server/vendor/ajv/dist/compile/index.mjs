@@ -1,11 +1,11 @@
 import { __commonJSMin } from "../../../../_virtual/_rolldown/runtime.mjs";
 import { require_codegen } from "./codegen/index.mjs";
-import { require_util } from "./util.mjs";
+import { require_validation_error } from "../runtime/validation_error.mjs";
 import { require_names } from "./names.mjs";
 import { require_resolve } from "./resolve.mjs";
+import { require_util } from "./util.mjs";
 import { require_validate } from "./validate/index.mjs";
-import { require_validation_error } from "../runtime/validation_error.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/compile/index.js
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/compile/index.js
 var require_compile = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.resolveSchema = exports.getCompilingSchema = exports.resolveRef = exports.compileSchema = exports.SchemaEnv = void 0;
@@ -218,6 +218,5 @@ var require_compile = /* @__PURE__ */ __commonJSMin(((exports) => {
 		if (env.schema !== env.root.schema) return env;
 	}
 }));
-//#endregion
 export default require_compile();
 export { require_compile };

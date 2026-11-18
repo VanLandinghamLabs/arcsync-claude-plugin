@@ -1,4 +1,4 @@
-//#region ../core/dist/graph/typeLookup.js
+// ../core/dist/graph/typeLookup.js
 /**
 * Reads a discriminator-keyed table without walking the prototype chain.
 *
@@ -40,5 +40,4 @@
 function lookupByType(table, key) {
 	return Object.hasOwn(table, key) ? table[key] : void 0;
 }
-//#endregion
 export { lookupByType };

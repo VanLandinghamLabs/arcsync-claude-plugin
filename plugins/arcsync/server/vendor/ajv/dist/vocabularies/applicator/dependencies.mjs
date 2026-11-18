@@ -2,7 +2,7 @@ import { __commonJSMin } from "../../../../../_virtual/_rolldown/runtime.mjs";
 import { require_codegen } from "../../compile/codegen/index.mjs";
 import { require_util } from "../../compile/util.mjs";
 import { require_code } from "../code.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/vocabularies/applicator/dependencies.js
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/vocabularies/applicator/dependencies.js
 var require_dependencies = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.validateSchemaDeps = exports.validatePropertyDeps = exports.error = void 0;
@@ -82,6 +82,5 @@ var require_dependencies = /* @__PURE__ */ __commonJSMin(((exports) => {
 	exports.validateSchemaDeps = validateSchemaDeps;
 	exports.default = def;
 }));
-//#endregion
 export default require_dependencies();
 export { require_dependencies };

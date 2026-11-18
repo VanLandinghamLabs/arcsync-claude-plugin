@@ -1,5 +1,5 @@
 import { GENERIC_ICON_IDS, ICON_SUBPATHS } from "../icons/iconAssets.mjs";
-//#region ../core/dist/authoring/icons.js
+// ../core/dist/authoring/icons.js
 /** Friendly id → canonical file-stem id, for names authors reach for that the
 * icon files spell differently. Every target must be a real vendor stem. */
 var ICON_ALIASES = Object.freeze({
@@ -92,5 +92,4 @@ var listIcons = (query) => {
 		vendor: vendorOf(id)
 	}));
 };
-//#endregion
 export { ICON_ALIASES, listIcons, resolveIcon, suggestIcon };

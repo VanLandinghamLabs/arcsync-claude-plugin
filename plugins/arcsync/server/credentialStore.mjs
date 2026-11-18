@@ -1,7 +1,7 @@
 import { randomBytes } from "node:crypto";
 import { mkdir, readFile, rename, rm, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
-//#region src/credentialStore.ts
+// src/credentialStore.ts
 function credentialPath(env, platform, home) {
 	const base = env.XDG_CONFIG_HOME?.trim() || platform === "win32" && env.APPDATA?.trim() || join(home, ".config");
 	return join(base, "arcsync", "mcp-credential.json");
@@ -55,5 +55,4 @@ function makeFileCredentialStore(path, apiUrl) {
 		}
 	};
 }
-//#endregion
 export { credentialPath, makeFileCredentialStore };

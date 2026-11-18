@@ -1,10 +1,10 @@
 import { __commonJSMin } from "../../../../../_virtual/_rolldown/runtime.mjs";
-import { require_codegen } from "../codegen/index.mjs";
-import { require_util } from "../util.mjs";
-import { require_errors } from "../errors.mjs";
 import { require_rules } from "../rules.mjs";
 import { require_applicability } from "./applicability.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/compile/validate/dataType.js
+import { require_errors } from "../errors.mjs";
+import { require_codegen } from "../codegen/index.mjs";
+import { require_util } from "../util.mjs";
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/compile/validate/dataType.js
 var require_dataType = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.reportTypeError = exports.checkDataTypes = exports.checkDataType = exports.coerceAndCheckDataType = exports.getJSONTypes = exports.getSchemaTypes = exports.DataType = void 0;
@@ -167,6 +167,5 @@ var require_dataType = /* @__PURE__ */ __commonJSMin(((exports) => {
 		};
 	}
 }));
-//#endregion
 export default require_dataType();
 export { require_dataType };

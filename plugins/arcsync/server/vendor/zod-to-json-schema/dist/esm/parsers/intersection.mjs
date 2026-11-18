@@ -1,5 +1,5 @@
 import { parseDef } from "../parseDef.mjs";
-//#region ../../node_modules/.pnpm/zod-to-json-schema@3.25.2_zod@4.6.7/node_modules/zod-to-json-schema/dist/esm/parsers/intersection.js
+// ../../node_modules/.pnpm/zod-to-json-schema@3.25.2_zod@4.6.7/node_modules/zod-to-json-schema/dist/esm/parsers/intersection.js
 var isJsonSchema7AllOfType = (type) => {
 	if ("type" in type && type.type === "string") return false;
 	return "allOf" in type;
@@ -40,5 +40,4 @@ function parseIntersectionDef(def, refs) {
 		...unevaluatedProperties
 	} : void 0;
 }
-//#endregion
 export { parseIntersectionDef };

@@ -1,9 +1,9 @@
 import { __commonJSMin } from "../../../../../_virtual/_rolldown/runtime.mjs";
 import { require_codegen } from "../codegen/index.mjs";
 import { require_names } from "../names.mjs";
-import { require_errors } from "../errors.mjs";
 import { require_code } from "../../vocabularies/code.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/compile/validate/keyword.js
+import { require_errors } from "../errors.mjs";
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/compile/validate/keyword.js
 var require_keyword = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.validateKeywordUsage = exports.validSchemaType = exports.funcKeywordCode = exports.macroKeywordCode = void 0;
@@ -108,6 +108,5 @@ var require_keyword = /* @__PURE__ */ __commonJSMin(((exports) => {
 	}
 	exports.validateKeywordUsage = validateKeywordUsage;
 }));
-//#endregion
 export default require_keyword();
 export { require_keyword };

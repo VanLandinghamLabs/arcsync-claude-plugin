@@ -1,6 +1,6 @@
-import { issue, normalizeParams, slugify } from "./util.mjs";
 import { $ZodCheck, $ZodCheckEndsWith, $ZodCheckGreaterThan, $ZodCheckIncludes, $ZodCheckLengthEquals, $ZodCheckLessThan, $ZodCheckLowerCase, $ZodCheckMaxLength, $ZodCheckMinLength, $ZodCheckMultipleOf, $ZodCheckOverwrite, $ZodCheckRegex, $ZodCheckStartsWith, $ZodCheckUpperCase } from "./checks.mjs";
-//#region ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v4/core/api.js
+import { issue, normalizeParams, slugify } from "./util.mjs";
+// ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v4/core/api.js
 function snapshotChecks(def) {
 	if (def.checks) def.checks = [...def.checks];
 	return def;
@@ -526,5 +526,4 @@ function _check(fn, params) {
 	ch._zod.check = fn;
 	return ch;
 }
-//#endregion
 export { _array, _base64, _base64url, _boolean, _check, _cidrv4, _cidrv6, _cuid, _cuid2, _custom, _e164, _email, _emoji, _endsWith, _gt, _gte, _gte as _min, _guid, _includes, _int, _ipv4, _ipv6, _isoDate, _isoDateTime, _isoDuration, _isoTime, _jwt, _ksuid, _length, _lowercase, _lt, _lte, _lte as _max, _maxLength, _minLength, _multipleOf, _nanoid, _never, _normalize, _null, _number, _overwrite, _refine, _regex, _slugify, _startsWith, _string, _superRefine, _toLowerCase, _toUpperCase, _trim, _ulid, _unknown, _uppercase, _url, _uuid, _uuidv4, _uuidv6, _uuidv7, _xid };

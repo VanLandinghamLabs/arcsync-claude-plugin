@@ -1,9 +1,9 @@
 import { __commonJSMin } from "../../../../../_virtual/_rolldown/runtime.mjs";
-import { require_util } from "../../compile/util.mjs";
-import { require_code } from "../code.mjs";
 import { require_validate } from "../../compile/validate/index.mjs";
+import { require_code } from "../code.mjs";
+import { require_util } from "../../compile/util.mjs";
 import { require_additionalProperties } from "./additionalProperties.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/vocabularies/applicator/properties.js
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/vocabularies/applicator/properties.js
 var require_properties = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	var validate_1 = require_validate();
@@ -47,6 +47,5 @@ var require_properties = /* @__PURE__ */ __commonJSMin(((exports) => {
 		}
 	};
 }));
-//#endregion
 export default require_properties();
 export { require_properties };

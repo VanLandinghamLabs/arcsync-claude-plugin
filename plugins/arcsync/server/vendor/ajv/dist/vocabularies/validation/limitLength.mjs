@@ -2,7 +2,7 @@ import { __commonJSMin } from "../../../../../_virtual/_rolldown/runtime.mjs";
 import { require_codegen } from "../../compile/codegen/index.mjs";
 import { require_util } from "../../compile/util.mjs";
 import { require_ucs2length } from "../../runtime/ucs2length.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/vocabularies/validation/limitLength.js
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/vocabularies/validation/limitLength.js
 var require_limitLength = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	var codegen_1 = require_codegen();
@@ -28,6 +28,5 @@ var require_limitLength = /* @__PURE__ */ __commonJSMin(((exports) => {
 		}
 	};
 }));
-//#endregion
 export default require_limitLength();
 export { require_limitLength };

@@ -1,4 +1,4 @@
-//#region ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v4/core/regexes.js
+// ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v4/core/regexes.js
 /**
 * @deprecated CUID v1 is deprecated by its authors due to information leakage
 * (timestamps embedded in the id). Use {@link cuid2} instead.
@@ -70,5 +70,4 @@ var boolean = /^(?:true|false)$/i;
 var _null = /^null$/i;
 var lowercase = /^[^A-Z]*$/;
 var uppercase = /^[^a-z]*$/;
-//#endregion
 export { anyString, base64, base64url, boolean, cidrv4, cidrv6, cuid, cuid2, date, datetime, duration, e164, email, emoji, guid, httpProtocol, integer, ipv4, ipv6, ksuid, lowercase, nanoid, nanoidOfLength, _null as null, number, time, ulid, uppercase, uuid, xid };

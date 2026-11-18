@@ -1,7 +1,7 @@
 import { __commonJSMin } from "../../../../../_virtual/_rolldown/runtime.mjs";
 import { require_codegen } from "../codegen/index.mjs";
 import { require_util } from "../util.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/compile/validate/subschema.js
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/compile/validate/subschema.js
 var require_subschema = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.extendSubschemaMode = exports.extendSubschemaData = exports.getSubschema = void 0;
@@ -67,6 +67,5 @@ var require_subschema = /* @__PURE__ */ __commonJSMin(((exports) => {
 	}
 	exports.extendSubschemaMode = extendSubschemaMode;
 }));
-//#endregion
 export default require_subschema();
 export { require_subschema };

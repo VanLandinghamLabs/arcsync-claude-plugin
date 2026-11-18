@@ -1,6 +1,6 @@
-import { hasGraphArrays } from "./types.mjs";
 import { fallbackRailFor, normalizeKey, readAttribute } from "./fallbackRail.mjs";
-//#region ../core/dist/graph/budgetSubscribers.js
+import { hasGraphArrays } from "./types.mjs";
+// ../core/dist/graph/budgetSubscribers.js
 /**
 * A budget names its subscribers inline. An SNS subscriber given as a reference
 * is already an edge to its topic; an email subscriber is not a resource, so it
@@ -54,5 +54,4 @@ function railBudgetSubscribers(graph) {
 		nodes
 	} : graph;
 }
-//#endregion
 export { railBudgetSubscribers };

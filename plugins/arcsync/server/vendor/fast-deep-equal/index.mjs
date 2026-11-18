@@ -1,5 +1,5 @@
 import { __commonJSMin } from "../../_virtual/_rolldown/runtime.mjs";
-//#region ../../node_modules/.pnpm/fast-deep-equal@3.1.3/node_modules/fast-deep-equal/index.js
+// ../../node_modules/.pnpm/fast-deep-equal@3.1.3/node_modules/fast-deep-equal/index.js
 var require_fast_deep_equal = /* @__PURE__ */ __commonJSMin(((exports, module) => {
 	module.exports = function equal(a, b) {
 		if (a === b) return true;
@@ -28,6 +28,5 @@ var require_fast_deep_equal = /* @__PURE__ */ __commonJSMin(((exports, module) =
 		return a !== a && b !== b;
 	};
 }));
-//#endregion
 export default require_fast_deep_equal();
 export { require_fast_deep_equal };

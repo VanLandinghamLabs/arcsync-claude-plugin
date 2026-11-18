@@ -1,4 +1,4 @@
-//#region ../core/dist/authoring/stateDiagram.js
+// ../core/dist/authoring/stateDiagram.js
 var MAX_AUTHORED_STATES = 2e3;
 var MAX_AUTHORED_TRANSITIONS = 2e4;
 var stateBudget = () => ({
@@ -344,5 +344,4 @@ var parseStateDiagram = (block, diags, budget = stateBudget()) => {
 	for (const open of stack) report("error", `state '${open.def.id}' has no matching }`, open.line, open.column);
 	return { root };
 };
-//#endregion
 export { MAX_AUTHORED_STATES, MAX_AUTHORED_TRANSITIONS, parseStateDiagram, stateBudget };

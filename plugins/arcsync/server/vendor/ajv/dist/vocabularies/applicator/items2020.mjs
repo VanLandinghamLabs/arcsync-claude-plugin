@@ -3,7 +3,7 @@ import { require_codegen } from "../../compile/codegen/index.mjs";
 import { require_util } from "../../compile/util.mjs";
 import { require_code } from "../code.mjs";
 import { require_additionalItems } from "./additionalItems.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/vocabularies/applicator/items2020.js
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/vocabularies/applicator/items2020.js
 var require_items2020 = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	var codegen_1 = require_codegen();
@@ -29,6 +29,5 @@ var require_items2020 = /* @__PURE__ */ __commonJSMin(((exports) => {
 		}
 	};
 }));
-//#endregion
 export default require_items2020();
 export { require_items2020 };

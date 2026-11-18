@@ -1,7 +1,7 @@
 import { __commonJSMin } from "../../../../_virtual/_rolldown/runtime.mjs";
-import { require_code } from "./codegen/code.mjs";
 import { require_codegen } from "./codegen/index.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/compile/util.js
+import { require_code } from "./codegen/code.mjs";
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/compile/util.js
 var require_util = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.checkStrictMode = exports.getErrorPath = exports.Type = exports.useFunc = exports.setEvaluated = exports.evaluatedPropsToName = exports.mergeEvaluated = exports.eachItem = exports.unescapeJsonPointer = exports.escapeJsonPointer = exports.escapeFragment = exports.unescapeFragment = exports.schemaRefOrVal = exports.schemaHasRulesButRef = exports.schemaHasRules = exports.checkUnknownRules = exports.alwaysValidSchema = exports.toHash = void 0;
@@ -141,6 +141,5 @@ var require_util = /* @__PURE__ */ __commonJSMin(((exports) => {
 	}
 	exports.checkStrictMode = checkStrictMode;
 }));
-//#endregion
 export default require_util();
 export { require_util };

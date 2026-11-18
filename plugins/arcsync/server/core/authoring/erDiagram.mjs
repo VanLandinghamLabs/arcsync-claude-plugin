@@ -151,5 +151,4 @@ function parseErDiagram(block, diags) {
 		relationships
 	};
 }
-//#endregion
 export { parseErDiagram };

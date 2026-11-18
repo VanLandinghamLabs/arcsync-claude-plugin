@@ -1,4 +1,4 @@
-//#region ../core/dist/graph/types.js
+// ../core/dist/graph/types.js
 var ResourceType;
 (function(ResourceType) {
 	ResourceType["EC2_INSTANCE"] = "aws_instance";
@@ -223,5 +223,4 @@ new Set(SERVER_SYNTH_ENGINES);
 function hasGraphArrays(graph) {
 	return Array.isArray(graph?.nodes) && Array.isArray(graph?.edges);
 }
-//#endregion
 export { EdgeType, ResourceType, SERVER_SYNTH_ENGINES, hasGraphArrays };

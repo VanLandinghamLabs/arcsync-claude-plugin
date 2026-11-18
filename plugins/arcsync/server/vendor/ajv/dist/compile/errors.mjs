@@ -2,7 +2,7 @@ import { __commonJSMin } from "../../../../_virtual/_rolldown/runtime.mjs";
 import { require_codegen } from "./codegen/index.mjs";
 import { require_util } from "./util.mjs";
 import { require_names } from "./names.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/compile/errors.js
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/compile/errors.js
 var require_errors = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.extendErrors = exports.resetErrorsCount = exports.reportExtraError = exports.reportError = exports.keyword$DataError = exports.keywordError = void 0;
@@ -97,6 +97,5 @@ var require_errors = /* @__PURE__ */ __commonJSMin(((exports) => {
 		if (propertyName) keyValues.push([E.propertyName, propertyName]);
 	}
 }));
-//#endregion
 export default require_errors();
 export { require_errors };

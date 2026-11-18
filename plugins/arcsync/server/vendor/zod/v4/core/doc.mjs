@@ -1,4 +1,4 @@
-//#region ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v4/core/doc.js
+// ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v4/core/doc.js
 var Doc = class {
 	constructor(args = [], closed = {}) {
 		this.content = [];
@@ -31,5 +31,4 @@ var Doc = class {
 		return new F(...Object.keys(this.closed), `return function (${this.args.join(", ")}) {\n${content.join("\n")}\n};`)(...Object.values(this.closed));
 	}
 };
-//#endregion
 export { Doc };

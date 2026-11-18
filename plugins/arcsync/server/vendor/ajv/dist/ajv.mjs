@@ -1,13 +1,13 @@
 import { __commonJSMin, __toCommonJS } from "../../../_virtual/_rolldown/runtime.mjs";
-import { require_codegen } from "./compile/codegen/index.mjs";
-import { require_validate } from "./compile/validate/index.mjs";
-import { require_validation_error } from "./runtime/validation_error.mjs";
-import { require_ref_error } from "./compile/ref_error.mjs";
 import { require_core } from "./core.mjs";
 import { require_draft7 } from "./vocabularies/draft7.mjs";
 import { require_discriminator } from "./vocabularies/discriminator/index.mjs";
 import { init_json_schema_draft_07, json_schema_draft_07_exports } from "./refs/json-schema-draft-07.json.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/ajv.js
+import { require_validate } from "./compile/validate/index.mjs";
+import { require_codegen } from "./compile/codegen/index.mjs";
+import { require_validation_error } from "./runtime/validation_error.mjs";
+import { require_ref_error } from "./compile/ref_error.mjs";
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/ajv.js
 var require_ajv = /* @__PURE__ */ __commonJSMin(((exports, module) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.MissingRefError = exports.ValidationError = exports.CodeGen = exports.Name = exports.nil = exports.stringify = exports.str = exports._ = exports.KeywordCxt = exports.Ajv = void 0;
@@ -98,6 +98,5 @@ var require_ajv = /* @__PURE__ */ __commonJSMin(((exports, module) => {
 		}
 	});
 }));
-//#endregion
 export default require_ajv();
 export { require_ajv };

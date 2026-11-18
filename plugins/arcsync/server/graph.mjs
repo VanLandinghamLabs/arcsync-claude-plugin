@@ -1,4 +1,4 @@
-//#region src/graph.ts
+// src/graph.ts
 var str = (v) => typeof v === "string" && v.length > 0 ? v : void 0;
 var num = (v) => {
 	const n = typeof v === "string" ? Number(v) : v;
@@ -142,5 +142,4 @@ function graphAsJson(graph) {
 		}))
 	};
 }
-//#endregion
 export { boundedAttributes, canvasUrl, compact, describeResource, diagramTitle, findResource, graphAsJson, graphOf, matchesQuery, nodeRef, summarizeListItem };

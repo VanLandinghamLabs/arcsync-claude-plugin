@@ -1,5 +1,5 @@
 import { ApiError, CredentialRejectedError } from "./api.mjs";
-//#region src/session.ts
+// src/session.ts
 var reason = (err) => err instanceof Error ? err.message : String(err);
 /**
 * An ApiClient that finds its credential lazily: the environment, then the
@@ -80,5 +80,4 @@ function makeSessionClient(deps) {
 		post: (path, body) => call((c) => c.post(path, body))
 	};
 }
-//#endregion
 export { makeSessionClient };

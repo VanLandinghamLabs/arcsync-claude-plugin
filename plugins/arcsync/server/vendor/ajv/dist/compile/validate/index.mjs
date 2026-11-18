@@ -1,16 +1,16 @@
 import { __commonJSMin } from "../../../../../_virtual/_rolldown/runtime.mjs";
-import { require_codegen } from "../codegen/index.mjs";
-import { require_util } from "../util.mjs";
-import { require_names } from "../names.mjs";
-import { require_errors } from "../errors.mjs";
 import { require_boolSchema } from "./boolSchema.mjs";
-import { require_applicability } from "./applicability.mjs";
 import { require_dataType } from "./dataType.mjs";
+import { require_applicability } from "./applicability.mjs";
 import { require_defaults } from "./defaults.mjs";
 import { require_keyword } from "./keyword.mjs";
 import { require_subschema } from "./subschema.mjs";
+import { require_codegen } from "../codegen/index.mjs";
+import { require_names } from "../names.mjs";
 import { require_resolve } from "../resolve.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/compile/validate/index.js
+import { require_util } from "../util.mjs";
+import { require_errors } from "../errors.mjs";
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/compile/validate/index.js
 var require_validate = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.getData = exports.KeywordCxt = exports.validateFunctionCode = void 0;
@@ -428,6 +428,5 @@ var require_validate = /* @__PURE__ */ __commonJSMin(((exports) => {
 	}
 	exports.getData = getData;
 }));
-//#endregion
 export default require_validate();
 export { require_validate };

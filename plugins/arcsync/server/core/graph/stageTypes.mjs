@@ -1,6 +1,6 @@
-import { ResourceType } from "./types.mjs";
 import { lookupByType } from "./typeLookup.mjs";
-//#region ../core/dist/graph/stageTypes.js
+import { ResourceType } from "./types.mjs";
+// ../core/dist/graph/stageTypes.js
 /**
 * API Gateway stage raw provider types, the name extractor and the protocol
 * label, in their own module for the same reason `permissionTypes.ts` exists:
@@ -30,5 +30,4 @@ function protocolLabelFor(node) {
 function apiGatewayTypeLabel(node) {
 	return API_TYPES.has(node.type) ? protocolLabelFor(node) : "";
 }
-//#endregion
 export { API_TYPES, apiGatewayTypeLabel, protocolLabelFor };

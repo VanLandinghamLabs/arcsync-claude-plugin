@@ -1,8 +1,8 @@
 import { __commonJSMin } from "../../../../../_virtual/_rolldown/runtime.mjs";
+import { require_errors } from "../errors.mjs";
 import { require_codegen } from "../codegen/index.mjs";
 import { require_names } from "../names.mjs";
-import { require_errors } from "../errors.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/compile/validate/boolSchema.js
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/compile/validate/boolSchema.js
 var require_boolSchema = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.boolOrEmptySchema = exports.topBoolOrEmptySchema = void 0;
@@ -43,6 +43,5 @@ var require_boolSchema = /* @__PURE__ */ __commonJSMin(((exports) => {
 		(0, errors_1.reportError)(cxt, boolError, void 0, overrideAllErrors);
 	}
 }));
-//#endregion
 export default require_boolSchema();
 export { require_boolSchema };

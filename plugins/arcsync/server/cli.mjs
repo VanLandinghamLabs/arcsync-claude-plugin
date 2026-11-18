@@ -3,7 +3,7 @@ import { envCredential, readSettings } from "./config.mjs";
 import { credentialPath, makeFileCredentialStore } from "./credentialStore.mjs";
 import { connectLabel, startLoopbackLogin } from "./login.mjs";
 import { makeSessionClient } from "./session.mjs";
-//#region src/cli.ts
+// src/cli.ts
 /** Best effort: a headless box has no browser, and the URL is printed anyway. */
 function openBrowser(spawn, platform, url) {
 	const [command, args] = platform === "darwin" ? ["open", [url]] : platform === "win32" ? ["rundll32", ["url.dll,FileProtocolHandler", url]] : ["xdg-open", [url]];
@@ -66,5 +66,4 @@ async function runCommand(command, deps) {
 	await login(deps, store, startLogin);
 	return 0;
 }
-//#endregion
 export { buildServerApi, openBrowser, runCommand };

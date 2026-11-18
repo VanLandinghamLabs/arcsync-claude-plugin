@@ -1,10 +1,10 @@
-import { CallToolRequestSchema, CallToolResultSchema, CreateMessageResultSchema, CreateMessageResultWithToolsSchema, CreateTaskResultSchema, ElicitResultSchema, EmptyResultSchema, ErrorCode, InitializeRequestSchema, InitializedNotificationSchema, LATEST_PROTOCOL_VERSION, ListRootsResultSchema, LoggingLevelSchema, McpError, SUPPORTED_PROTOCOL_VERSIONS, SetLevelRequestSchema } from "../types.mjs";
-import { getLiteralValue, getObjectShape, safeParse } from "./zod-compat.mjs";
 import { Protocol, mergeCapabilities } from "../shared/protocol.mjs";
+import { CallToolRequestSchema, CallToolResultSchema, CreateMessageResultSchema, CreateMessageResultWithToolsSchema, CreateTaskResultSchema, ElicitResultSchema, EmptyResultSchema, ErrorCode, InitializeRequestSchema, InitializedNotificationSchema, LATEST_PROTOCOL_VERSION, ListRootsResultSchema, LoggingLevelSchema, McpError, SUPPORTED_PROTOCOL_VERSIONS, SetLevelRequestSchema } from "../types.mjs";
 import { AjvJsonSchemaValidator } from "../validation/ajv-provider.mjs";
+import { getLiteralValue, getObjectShape, safeParse } from "./zod-compat.mjs";
 import { ExperimentalServerTasks } from "../experimental/tasks/server.mjs";
 import { assertClientRequestTaskCapability, assertToolsCallTaskCapability } from "../experimental/tasks/helpers.mjs";
-//#region ../../node_modules/.pnpm/@modelcontextprotocol+sdk@1.32.2_supports-color@7.2.0_zod@4.6.7/node_modules/@modelcontextprotocol/sdk/dist/esm/server/index.js
+// ../../node_modules/.pnpm/@modelcontextprotocol+sdk@1.32.2_supports-color@7.2.0_zod@4.6.7/node_modules/@modelcontextprotocol/sdk/dist/esm/server/index.js
 /**
 * An MCP server on top of a pluggable transport.
 *
@@ -326,5 +326,4 @@ var Server = class extends Protocol {
 		return this.notification({ method: "notifications/prompts/list_changed" });
 	}
 };
-//#endregion
 export { Server };

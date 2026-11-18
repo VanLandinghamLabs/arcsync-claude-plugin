@@ -1,7 +1,7 @@
 import { safeParse as safeParse$1, safeParseAsync as safeParseAsync$1 } from "../../../../../zod/v4/core/parse.mjs";
 import { object as objectType } from "../../../../../zod/v3/types.mjs";
 import { object } from "../../../../../zod/v4/mini/schemas.mjs";
-//#region ../../node_modules/.pnpm/@modelcontextprotocol+sdk@1.32.2_supports-color@7.2.0_zod@4.6.7/node_modules/@modelcontextprotocol/sdk/dist/esm/server/zod-compat.js
+// ../../node_modules/.pnpm/@modelcontextprotocol+sdk@1.32.2_supports-color@7.2.0_zod@4.6.7/node_modules/@modelcontextprotocol/sdk/dist/esm/server/zod-compat.js
 function isZ4Schema(s) {
 	return !!s._zod;
 }
@@ -123,5 +123,4 @@ function getLiteralValue(schema) {
 	const directValue = schema.value;
 	if (directValue !== void 0) return directValue;
 }
-//#endregion
 export { getLiteralValue, getObjectShape, getParseErrorMessage, getSchemaDescription, isSchemaOptional, isZ4Schema, normalizeObjectSchema, objectFromShape, safeParse, safeParseAsync };

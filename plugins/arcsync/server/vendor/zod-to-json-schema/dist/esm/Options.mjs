@@ -1,4 +1,4 @@
-//#region ../../node_modules/.pnpm/zod-to-json-schema@3.25.2_zod@4.6.7/node_modules/zod-to-json-schema/dist/esm/Options.js
+// ../../node_modules/.pnpm/zod-to-json-schema@3.25.2_zod@4.6.7/node_modules/zod-to-json-schema/dist/esm/Options.js
 var ignoreOverride = Symbol("Let zodToJsonSchema decide on which parser to use");
 var defaultOptions = {
 	name: void 0,
@@ -31,5 +31,4 @@ var getDefaultOptions = (options) => typeof options === "string" ? {
 	...defaultOptions,
 	...options
 };
-//#endregion
 export { defaultOptions, getDefaultOptions, ignoreOverride };

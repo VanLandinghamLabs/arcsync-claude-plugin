@@ -1,6 +1,6 @@
-import { EdgeType, ResourceType } from "./types.mjs";
 import { createEdgeIdMinter } from "./edgeIds.mjs";
-//#region ../core/dist/graph/groupByStack.js
+import { EdgeType, ResourceType } from "./types.mjs";
+// ../core/dist/graph/groupByStack.js
 /**
 * An ARM resource type's namespace segment (e.g. "Microsoft.Web" out of
 * "Microsoft.Web/serverfarms/plan") — always `Word.Word`, per the ARM spec.
@@ -149,5 +149,4 @@ function groupByStack(graph) {
 		metadata: graph.metadata
 	};
 }
-//#endregion
 export { groupByStack, stackMembership };

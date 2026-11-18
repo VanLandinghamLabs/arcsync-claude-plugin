@@ -1,7 +1,7 @@
+import { deriveEventNames, parseCelFilter } from "../filterExpr.mjs";
 import { eventsFromFilter, firstBlock, subscriptionBase } from "./context.mjs";
 import { resolveTfRef } from "./refs.mjs";
-import { deriveEventNames, parseCelFilter } from "../filterExpr.mjs";
-//#region ../core/dist/graph/eventFlows/gcp.js
+// ../core/dist/graph/eventFlows/gcp.js
 /**
 * GCP event derivations: Pub/Sub subscription CEL filters and Eventarc
 * trigger matching criteria.
@@ -43,5 +43,4 @@ function deriveFromEventarcTrigger(trigger, { nodeIds, pubsubTopics, neighbors }
 		}
 	}));
 }
-//#endregion
 export { deriveFromEventarcTrigger, deriveFromPubsubSubscription };

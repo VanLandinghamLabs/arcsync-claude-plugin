@@ -1,6 +1,6 @@
-import errorMap from "../locales/en.mjs";
 import { getErrorMap } from "../errors.mjs";
-//#region ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v3/helpers/parseUtil.js
+import errorMap from "../locales/en.mjs";
+// ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v3/helpers/parseUtil.js
 var makeIssue = (params) => {
 	const { data, path, errorMaps, issueData } = params;
 	const fullPath = [...path, ...issueData.path || []];
@@ -103,5 +103,4 @@ var isAborted = (x) => x.status === "aborted";
 var isDirty = (x) => x.status === "dirty";
 var isValid = (x) => x.status === "valid";
 var isAsync = (x) => typeof Promise !== "undefined" && x instanceof Promise;
-//#endregion
 export { DIRTY, INVALID, OK, ParseStatus, addIssueToContext, isAborted, isAsync, isDirty, isValid, makeIssue };

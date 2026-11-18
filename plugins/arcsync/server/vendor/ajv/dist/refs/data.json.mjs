@@ -1,5 +1,5 @@
 import { __esmMin, __exportAll } from "../../../../_virtual/_rolldown/runtime.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/refs/data.json
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/refs/data.json
 var data_exports = /* @__PURE__ */ __exportAll({
 	$id: () => $id,
 	additionalProperties: () => false,
@@ -27,6 +27,5 @@ var init_data = __esmMin((() => {
 		additionalProperties: false
 	};
 }));
-//#endregion
 init_data();
 export { $id, data_exports, data_default as default, description, init_data, properties, required, type };

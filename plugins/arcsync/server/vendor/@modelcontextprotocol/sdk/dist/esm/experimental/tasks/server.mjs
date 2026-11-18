@@ -1,5 +1,5 @@
 import { CreateMessageResultSchema, ElicitResultSchema } from "../../types.mjs";
-//#region ../../node_modules/.pnpm/@modelcontextprotocol+sdk@1.32.2_supports-color@7.2.0_zod@4.6.7/node_modules/@modelcontextprotocol/sdk/dist/esm/experimental/tasks/server.js
+// ../../node_modules/.pnpm/@modelcontextprotocol+sdk@1.32.2_supports-color@7.2.0_zod@4.6.7/node_modules/@modelcontextprotocol/sdk/dist/esm/experimental/tasks/server.js
 /**
 * Experimental server task features for MCP SDK.
 * WARNING: These APIs are experimental and may change without notice.
@@ -216,5 +216,4 @@ var ExperimentalServerTasks = class {
 		return this._server.cancelTask({ taskId }, options);
 	}
 };
-//#endregion
 export { ExperimentalServerTasks };

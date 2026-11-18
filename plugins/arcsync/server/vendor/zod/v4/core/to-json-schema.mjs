@@ -1,6 +1,6 @@
-import { assignProp } from "./util.mjs";
 import { globalRegistry } from "./registries.mjs";
-//#region ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v4/core/to-json-schema.js
+import { assignProp } from "./util.mjs";
+// ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v4/core/to-json-schema.js
 function assignProps(target, ...sources) {
 	for (const source of sources) for (const key of Reflect.ownKeys(source)) if (Object.prototype.propertyIsEnumerable.call(source, key)) assignProp(target, key, source[key]);
 	return target;
@@ -444,5 +444,4 @@ var createStandardJSONSchemaMethod = (schema, io, processors = {}) => (params) =
 	extractDefs(ctx, schema);
 	return finalize(ctx, schema);
 };
-//#endregion
 export { createStandardJSONSchemaMethod, createToJSONSchemaMethod, extractDefs, finalize, handleUnrepresentable, initializeContext, processSchema as process, processSchema };

@@ -1,9 +1,9 @@
 import { ZodFirstPartyTypeKind } from "../../../../zod/v3/types.mjs";
-import { parseAnyDef } from "./any.mjs";
-import { parseBrandedDef } from "./branded.mjs";
-import { parseStringDef } from "./string.mjs";
 import { parseDef } from "../parseDef.mjs";
-//#region ../../node_modules/.pnpm/zod-to-json-schema@3.25.2_zod@4.6.7/node_modules/zod-to-json-schema/dist/esm/parsers/record.js
+import { parseStringDef } from "./string.mjs";
+import { parseBrandedDef } from "./branded.mjs";
+import { parseAnyDef } from "./any.mjs";
+// ../../node_modules/.pnpm/zod-to-json-schema@3.25.2_zod@4.6.7/node_modules/zod-to-json-schema/dist/esm/parsers/record.js
 function parseRecordDef(def, refs) {
 	if (refs.target === "openAi") console.warn("Warning: OpenAI may not support records in schemas! Try an array of key-value pairs instead.");
 	if (refs.target === "openApi3" && def.keyType?._def.typeName === ZodFirstPartyTypeKind.ZodEnum) return {
@@ -49,5 +49,4 @@ function parseRecordDef(def, refs) {
 	}
 	return schema;
 }
-//#endregion
 export { parseRecordDef };

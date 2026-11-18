@@ -1,7 +1,7 @@
-import { EdgeType, ResourceType } from "./types.mjs";
 import { createEdgeIdMinter } from "./edgeIds.mjs";
 import { stackMembership } from "./groupByStack.mjs";
-//#region ../core/dist/graph/collapseIntegrations.js
+import { EdgeType, ResourceType } from "./types.mjs";
+// ../core/dist/graph/collapseIntegrations.js
 var CUSTOM_DOMAIN_RESOURCE_TYPES = /* @__PURE__ */ new Set([
 	"AWS::ApiGatewayV2::DomainName",
 	"aws_apigatewayv2_domain_name",
@@ -167,5 +167,4 @@ function collapseIntegrations(graph) {
 	};
 }
 var isResourceTypeIn = (node, types) => node !== void 0 && types.has(node.resourceType);
-//#endregion
 export { collapseIntegrations };

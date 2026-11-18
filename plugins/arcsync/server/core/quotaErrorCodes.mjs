@@ -1,4 +1,4 @@
-//#region ../core/dist/quotaErrorCodes.js
+// ../core/dist/quotaErrorCodes.js
 /**
 * Every `errorCode` a quota refusal (429 with tier/limit/used/resetAt) carries.
 * Other 429s (PAT pastes, invites, share-link reads) are rate limits, not
@@ -17,5 +17,4 @@ var QUOTA_ERROR_CODES = [
 	"SYNTH_PLAN_REQUIRED"
 ];
 var isQuotaErrorCode = (value) => QUOTA_ERROR_CODES.includes(value);
-//#endregion
 export { QUOTA_ERROR_CODES, isQuotaErrorCode };

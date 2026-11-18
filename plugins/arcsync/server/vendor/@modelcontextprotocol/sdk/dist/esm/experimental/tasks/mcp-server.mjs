@@ -1,4 +1,4 @@
-//#region ../../node_modules/.pnpm/@modelcontextprotocol+sdk@1.32.2_supports-color@7.2.0_zod@4.6.7/node_modules/@modelcontextprotocol/sdk/dist/esm/experimental/tasks/mcp-server.js
+// ../../node_modules/.pnpm/@modelcontextprotocol+sdk@1.32.2_supports-color@7.2.0_zod@4.6.7/node_modules/@modelcontextprotocol/sdk/dist/esm/experimental/tasks/mcp-server.js
 /**
 * Experimental McpServer task features for MCP SDK.
 * WARNING: These APIs are experimental and may change without notice.
@@ -28,5 +28,4 @@ var ExperimentalMcpServerTasks = class {
 		return this._mcpServer._createRegisteredTool(name, config.title, config.description, config.inputSchema, config.outputSchema, config.annotations, execution, config._meta, handler);
 	}
 };
-//#endregion
 export { ExperimentalMcpServerTasks };

@@ -1,8 +1,8 @@
-import { BIGINT_FORMAT_RANGES, NUMBER_FORMAT_RANGES, assignProp, getEnumValues } from "./util.mjs";
 import { base64, base64url, integer, number } from "./regexes.mjs";
 import { base64Charset, base64urlCharset } from "./schemas.mjs";
 import { extractDefs, finalize, handleUnrepresentable, initializeContext, process as processSchema } from "./to-json-schema.mjs";
-//#region ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v4/core/json-schema-processors.js
+import { BIGINT_FORMAT_RANGES, NUMBER_FORMAT_RANGES, assignProp, getEnumValues } from "./util.mjs";
+// ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v4/core/json-schema-processors.js
 var narrowMin = (agg, key, value) => {
 	if (agg[key] === void 0 || value > agg[key]) agg[key] = value;
 };
@@ -647,5 +647,4 @@ function toJSONSchema(input, params) {
 	extractDefs(ctx, input);
 	return finalize(ctx, input);
 }
-//#endregion
 export { aggregateChecks, allProcessors, anyProcessor, arrayProcessor, bigintProcessor, booleanProcessor, catchProcessor, customProcessor, dateProcessor, defaultProcessor, enumProcessor, fileProcessor, functionProcessor, intersectionProcessor, lazyProcessor, literalProcessor, mapProcessor, nanProcessor, neverProcessor, nonoptionalProcessor, nullProcessor, nullableProcessor, numberProcessor, objectProcessor, optionalProcessor, pipeProcessor, prefaultProcessor, promiseProcessor, readonlyProcessor, recordProcessor, setProcessor, stringProcessor, successProcessor, symbolProcessor, templateLiteralProcessor, toJSONSchema, transformProcessor, tupleProcessor, undefinedProcessor, unionProcessor, unknownProcessor, voidProcessor };

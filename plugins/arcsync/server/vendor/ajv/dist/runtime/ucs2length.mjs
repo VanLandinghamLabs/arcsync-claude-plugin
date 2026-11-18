@@ -1,5 +1,5 @@
 import { __commonJSMin } from "../../../../_virtual/_rolldown/runtime.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/runtime/ucs2length.js
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/runtime/ucs2length.js
 var require_ucs2length = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	function ucs2length(str) {
@@ -20,6 +20,5 @@ var require_ucs2length = /* @__PURE__ */ __commonJSMin(((exports) => {
 	exports.default = ucs2length;
 	ucs2length.code = "require(\"ajv/dist/runtime/ucs2length\").default";
 }));
-//#endregion
 export default require_ucs2length();
 export { require_ucs2length };

@@ -1,5 +1,5 @@
 import { ResourceType } from "./types.mjs";
-//#region ../core/dist/graph/resourceCategory.js
+// ../core/dist/graph/resourceCategory.js
 /**
 * Authoritative resource-type → category map. The Mermaid renderer derives its
 * `classDef` styling from this, and the frontend canvas derives its legend
@@ -184,5 +184,4 @@ var CATEGORY_BY_TYPE = {
 	[ResourceType.AZURE_RESOURCE_GROUP]: "infra",
 	[ResourceType.AZURE_DEPLOYMENT]: "infra"
 };
-//#endregion
 export { CATEGORY_BY_TYPE };

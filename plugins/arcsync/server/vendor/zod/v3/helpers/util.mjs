@@ -1,4 +1,4 @@
-//#region ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v3/helpers/util.js
+// ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v3/helpers/util.js
 var util;
 (function(util) {
 	util.assertEqual = (_) => {};
@@ -93,5 +93,4 @@ var getParsedType = (data) => {
 		default: return ZodParsedType.unknown;
 	}
 };
-//#endregion
 export { ZodParsedType, getParsedType, objectUtil, util };

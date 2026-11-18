@@ -1,7 +1,7 @@
+import { parseDef } from "./parseDef.mjs";
 import { getRefs } from "./Refs.mjs";
 import { parseAnyDef } from "./parsers/any.mjs";
-import { parseDef } from "./parseDef.mjs";
-//#region ../../node_modules/.pnpm/zod-to-json-schema@3.25.2_zod@4.6.7/node_modules/zod-to-json-schema/dist/esm/zodToJsonSchema.js
+// ../../node_modules/.pnpm/zod-to-json-schema@3.25.2_zod@4.6.7/node_modules/zod-to-json-schema/dist/esm/zodToJsonSchema.js
 var zodToJsonSchema = (schema, options) => {
 	const refs = getRefs(options);
 	let definitions = typeof options === "object" && options.definitions ? Object.entries(options.definitions).reduce((acc, [name, schema]) => ({
@@ -63,5 +63,4 @@ var zodToJsonSchema = (schema, options) => {
 	if (refs.target === "openAi" && ("anyOf" in combined || "oneOf" in combined || "allOf" in combined || "type" in combined && Array.isArray(combined.type))) console.warn("Warning: OpenAI may not support schemas with unions as roots! Try wrapping it in an object property.");
 	return combined;
 };
-//#endregion
 export { zodToJsonSchema };

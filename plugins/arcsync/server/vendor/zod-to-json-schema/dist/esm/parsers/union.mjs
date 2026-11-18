@@ -1,5 +1,5 @@
 import { parseDef } from "../parseDef.mjs";
-//#region ../../node_modules/.pnpm/zod-to-json-schema@3.25.2_zod@4.6.7/node_modules/zod-to-json-schema/dist/esm/parsers/union.js
+// ../../node_modules/.pnpm/zod-to-json-schema@3.25.2_zod@4.6.7/node_modules/zod-to-json-schema/dist/esm/parsers/union.js
 var primitiveMappings = {
 	ZodString: "string",
 	ZodNumber: "number",
@@ -54,5 +54,4 @@ var asAnyOf = (def, refs) => {
 	})).filter((x) => !!x && (!refs.strictUnions || typeof x === "object" && Object.keys(x).length > 0));
 	return anyOf.length ? { anyOf } : void 0;
 };
-//#endregion
 export { parseUnionDef, primitiveMappings };

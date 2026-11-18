@@ -1,7 +1,7 @@
 import { __commonJSMin } from "../../../../../_virtual/_rolldown/runtime.mjs";
 import { require_codegen } from "../codegen/index.mjs";
 import { require_util } from "../util.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/compile/validate/defaults.js
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/compile/validate/defaults.js
 var require_defaults = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.assignDefaults = void 0;
@@ -26,6 +26,5 @@ var require_defaults = /* @__PURE__ */ __commonJSMin(((exports) => {
 		gen.if(condition, (0, codegen_1._)`${childData} = ${(0, codegen_1.stringify)(defaultValue)}`);
 	}
 }));
-//#endregion
 export default require_defaults();
 export { require_defaults };

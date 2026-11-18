@@ -1,5 +1,5 @@
 import { __commonJSMin } from "../../../../_virtual/_rolldown/runtime.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/runtime/validation_error.js
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/runtime/validation_error.js
 var require_validation_error = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	var ValidationError = class extends Error {
@@ -11,6 +11,5 @@ var require_validation_error = /* @__PURE__ */ __commonJSMin(((exports) => {
 	};
 	exports.default = ValidationError;
 }));
-//#endregion
 export default require_validation_error();
 export { require_validation_error };

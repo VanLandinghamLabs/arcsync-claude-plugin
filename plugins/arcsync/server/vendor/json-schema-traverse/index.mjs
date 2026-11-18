@@ -1,5 +1,5 @@
 import { __commonJSMin } from "../../_virtual/_rolldown/runtime.mjs";
-//#region ../../node_modules/.pnpm/json-schema-traverse@1.0.0/node_modules/json-schema-traverse/index.js
+// ../../node_modules/.pnpm/json-schema-traverse@1.0.0/node_modules/json-schema-traverse/index.js
 var require_json_schema_traverse = /* @__PURE__ */ __commonJSMin(((exports, module) => {
 	var traverse = module.exports = function(schema, opts, cb) {
 		if (typeof opts == "function") {
@@ -73,6 +73,5 @@ var require_json_schema_traverse = /* @__PURE__ */ __commonJSMin(((exports, modu
 		return str.replace(/~/g, "~0").replace(/\//g, "~1");
 	}
 }));
-//#endregion
 export default require_json_schema_traverse();
 export { require_json_schema_traverse };

@@ -1,4 +1,4 @@
-//#region ../core/dist/authoring/source.js
+// ../core/dist/authoring/source.js
 var MAX_SOURCE_CHARS = 2e5;
 var FENCE_OPEN = /^\s*```+\s*([A-Za-z0-9_-]*)/;
 var FENCE_CLOSE = /^\s*```+\s*$/;
@@ -126,5 +126,4 @@ var splitSource = (source, diags) => {
 	}
 	return raw.map((b, i) => describeBlock(i, b.lines, b.openLine, diags));
 };
-//#endregion
 export { MAX_SOURCE_CHARS, normaliseSource, splitSource };

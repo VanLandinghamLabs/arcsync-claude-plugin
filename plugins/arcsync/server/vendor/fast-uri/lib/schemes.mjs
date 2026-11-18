@@ -1,6 +1,6 @@
 import { __commonJSMin } from "../../../_virtual/_rolldown/runtime.mjs";
 import { require_utils } from "./utils.mjs";
-//#region ../../node_modules/.pnpm/fast-uri@3.1.2/node_modules/fast-uri/lib/schemes.js
+// ../../node_modules/.pnpm/fast-uri@3.1.2/node_modules/fast-uri/lib/schemes.js
 var require_schemes = /* @__PURE__ */ __commonJSMin(((exports, module) => {
 	var { isUUID } = require_utils();
 	var URN_REG = /([\da-z][\d\-a-z]{0,31}):((?:[\w!$'()*+,\-.:;=@]|%[\da-f]{2})+)/iu;
@@ -182,6 +182,5 @@ var require_schemes = /* @__PURE__ */ __commonJSMin(((exports, module) => {
 		getSchemeHandler
 	};
 }));
-//#endregion
 export default require_schemes();
 export { require_schemes };

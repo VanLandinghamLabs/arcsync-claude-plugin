@@ -1,6 +1,6 @@
-import { ZodParsedType, util } from "../helpers/util.mjs";
 import { ZodIssueCode } from "../ZodError.mjs";
-//#region ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v3/locales/en.js
+import { ZodParsedType, util } from "../helpers/util.mjs";
+// ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v3/locales/en.js
 var errorMap = (issue, _ctx) => {
 	let message;
 	switch (issue.code) {
@@ -77,5 +77,4 @@ var errorMap = (issue, _ctx) => {
 	}
 	return { message };
 };
-//#endregion
 export { errorMap as default };

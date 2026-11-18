@@ -1,8 +1,8 @@
-import { CancelTaskRequestSchema, CancelTaskResultSchema, CancelledNotificationSchema, CreateTaskResultSchema, ErrorCode, GetTaskPayloadRequestSchema, GetTaskRequestSchema, GetTaskResultSchema, ListTasksRequestSchema, ListTasksResultSchema, McpError, PingRequestSchema, ProgressNotificationSchema, RELATED_TASK_META_KEY, TaskStatusNotificationSchema, isJSONRPCErrorResponse, isJSONRPCNotification, isJSONRPCRequest, isJSONRPCResultResponse, isTaskAugmentedRequestParams } from "../types.mjs";
 import { safeParse } from "../server/zod-compat.mjs";
+import { CancelTaskRequestSchema, CancelTaskResultSchema, CancelledNotificationSchema, CreateTaskResultSchema, ErrorCode, GetTaskPayloadRequestSchema, GetTaskRequestSchema, GetTaskResultSchema, ListTasksRequestSchema, ListTasksResultSchema, McpError, PingRequestSchema, ProgressNotificationSchema, RELATED_TASK_META_KEY, TaskStatusNotificationSchema, isJSONRPCErrorResponse, isJSONRPCNotification, isJSONRPCRequest, isJSONRPCResultResponse, isTaskAugmentedRequestParams } from "../types.mjs";
 import { isTerminal } from "../experimental/tasks/interfaces.mjs";
 import { getMethodLiteral, parseWithCompat } from "../server/zod-json-schema-compat.mjs";
-//#region ../../node_modules/.pnpm/@modelcontextprotocol+sdk@1.32.2_supports-color@7.2.0_zod@4.6.7/node_modules/@modelcontextprotocol/sdk/dist/esm/shared/protocol.js
+// ../../node_modules/.pnpm/@modelcontextprotocol+sdk@1.32.2_supports-color@7.2.0_zod@4.6.7/node_modules/@modelcontextprotocol/sdk/dist/esm/shared/protocol.js
 /**
 * The default request timeout, in miliseconds.
 */
@@ -874,5 +874,4 @@ function mergeCapabilities(base, additional) {
 	}
 	return result;
 }
-//#endregion
 export { DEFAULT_REQUEST_TIMEOUT_MSEC, Protocol, mergeCapabilities };

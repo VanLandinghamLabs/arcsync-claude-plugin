@@ -1,9 +1,9 @@
 import { __commonJSMin } from "../../../../../_virtual/_rolldown/runtime.mjs";
-import { require_codegen } from "../../compile/codegen/index.mjs";
-import { require_util } from "../../compile/util.mjs";
-import { require_names } from "../../compile/names.mjs";
 import { require_code } from "../code.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/vocabularies/applicator/additionalProperties.js
+import { require_codegen } from "../../compile/codegen/index.mjs";
+import { require_names } from "../../compile/names.mjs";
+import { require_util } from "../../compile/util.mjs";
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/vocabularies/applicator/additionalProperties.js
 var require_additionalProperties = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	var code_1 = require_code();
@@ -91,6 +91,5 @@ var require_additionalProperties = /* @__PURE__ */ __commonJSMin(((exports) => {
 		}
 	};
 }));
-//#endregion
 export default require_additionalProperties();
 export { require_additionalProperties };

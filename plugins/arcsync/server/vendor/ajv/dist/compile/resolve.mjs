@@ -2,7 +2,7 @@ import { __commonJSMin } from "../../../../_virtual/_rolldown/runtime.mjs";
 import { require_util } from "./util.mjs";
 import { require_fast_deep_equal } from "../../../fast-deep-equal/index.mjs";
 import { require_json_schema_traverse } from "../../../json-schema-traverse/index.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/compile/resolve.js
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/compile/resolve.js
 var require_resolve = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.getSchemaRefs = exports.resolveUrl = exports.normalizeId = exports._getFullPath = exports.getFullPath = exports.inlineRef = void 0;
@@ -130,6 +130,5 @@ var require_resolve = /* @__PURE__ */ __commonJSMin(((exports) => {
 	}
 	exports.getSchemaRefs = getSchemaRefs;
 }));
-//#endregion
 export default require_resolve();
 export { require_resolve };

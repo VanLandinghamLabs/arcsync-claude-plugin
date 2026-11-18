@@ -1,4 +1,4 @@
-//#region src/config.ts
+// src/config.ts
 var DEFAULT_API_URL = "https://api.arcsync.dev";
 var DEFAULT_APP_URL = "https://arcsync.dev";
 var trimSlash = (url) => url.replace(/\/+$/, "");
@@ -35,5 +35,4 @@ function envCredential(env) {
 		clientSecret
 	};
 }
-//#endregion
 export { envCredential, readSettings };

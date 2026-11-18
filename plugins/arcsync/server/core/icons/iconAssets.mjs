@@ -1,11 +1,11 @@
-import { ResourceType } from "../graph/types.mjs";
 import { lookupByType } from "../graph/typeLookup.mjs";
+import { ResourceType } from "../graph/types.mjs";
 import { azapiArmType } from "../parsers/terraform/azapiType.mjs";
 import { AWS_ICON_FILENAMES } from "./awsIconRegistry.mjs";
 import { AZURE_ICON_FILENAMES } from "./azureIconRegistry.mjs";
 import { GCP_ICON_FILENAMES } from "./gcpIconRegistry.mjs";
 import { unknownIconSubpath } from "./unknownIconFallback.mjs";
-//#region ../core/dist/icons/iconAssets.js
+// ../core/dist/icons/iconAssets.js
 /**
 * `resourceType` → `<vendor>/<file>.svg`, relative to wherever the icon assets
 * happen to be rooted — `/icons/` over HTTP for the SPA, a directory on disk
@@ -63,5 +63,4 @@ function iconSubpathForNode(node) {
 	if (node.type === ResourceType.UNKNOWN) return unknownIconSubpath(azapiArmType(node.resourceType, node.attributes) ?? node.resourceType);
 	return iconSubpathFor(node.type);
 }
-//#endregion
 export { DEFAULT_AUTHORED_ICON, GENERIC_ICON_IDS, ICON_SUBPATHS, authoredIconSubpath, iconSubpathFor, iconSubpathForNode };

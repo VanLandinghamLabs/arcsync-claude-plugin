@@ -1,4 +1,4 @@
-//#region ../../node_modules/.pnpm/@modelcontextprotocol+sdk@1.32.2_supports-color@7.2.0_zod@4.6.7/node_modules/@modelcontextprotocol/sdk/dist/esm/shared/toolNameValidation.js
+// ../../node_modules/.pnpm/@modelcontextprotocol+sdk@1.32.2_supports-color@7.2.0_zod@4.6.7/node_modules/@modelcontextprotocol/sdk/dist/esm/shared/toolNameValidation.js
 /**
 * Tool name validation utilities according to SEP: Specify Format for Tool Names
 *
@@ -68,5 +68,4 @@ function validateAndWarnToolName(name) {
 	issueToolNameWarning(name, result.warnings);
 	return result.isValid;
 }
-//#endregion
 export { issueToolNameWarning, validateAndWarnToolName, validateToolName };

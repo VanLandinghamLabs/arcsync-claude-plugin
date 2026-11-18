@@ -1,5 +1,5 @@
 import { isQuotaErrorCode } from "./core/quotaErrorCodes.mjs";
-//#region src/api.ts
+// src/api.ts
 var ApiError = class extends Error {
 	status;
 	body;
@@ -127,5 +127,4 @@ function makeApiClient(config, fetchImpl, now) {
 		post: (path, body) => request("POST", path, body)
 	};
 }
-//#endregion
 export { ApiError, CredentialRejectedError, makeApiClient };

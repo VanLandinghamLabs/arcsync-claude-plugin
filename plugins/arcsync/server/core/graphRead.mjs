@@ -1,4 +1,4 @@
-//#region ../core/dist/graphRead.js
+// ../core/dist/graphRead.js
 /** Resolved to a CANON by its own id: the row is nested under `canonical`. */
 function isCanonRead(r) {
 	return "canonical" in r && typeof r.canonical === "object" && r.canonical !== null;
@@ -12,5 +12,4 @@ function isCanonRead(r) {
 function canonicalFieldsOf(r) {
 	return isCanonRead(r) ? r.canonical : r;
 }
-//#endregion
 export { canonicalFieldsOf, isCanonRead };

@@ -1,6 +1,6 @@
-import { EdgeType, ResourceType, hasGraphArrays } from "./types.mjs";
 import { fallbackRailFor, namesNode, railLabelFor, readAttribute, readAttributeEntry, referenceToken } from "./fallbackRail.mjs";
-//#region ../core/dist/graph/foldInvokeConfigs.js
+import { EdgeType, ResourceType, hasGraphArrays } from "./types.mjs";
+// ../core/dist/graph/foldInvokeConfigs.js
 /**
 * Folds each Lambda async-invoke config into the function it configures, the way
 * an owned log group becomes a LOGS rail: the node goes, its settings ride on the
@@ -128,5 +128,4 @@ function foldInvokeConfigs(graph) {
 		edges: [...surviving, ...minted]
 	};
 }
-//#endregion
 export { foldInvokeConfigs };

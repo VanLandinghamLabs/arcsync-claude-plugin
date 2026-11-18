@@ -1,5 +1,5 @@
 import { ResourceType } from "./types.mjs";
-//#region ../core/dist/graph/authored.js
+// ../core/dist/graph/authored.js
 /**
 * Hand-authored nodes (`docs/superpowers/specs/2026-10-21-arcsync-diagram-syntax-and-interactive-embeds-design.md` §2):
 * `type: "authored"`, with `attributes.icon` (a namespaced id such as `user` or
@@ -24,6 +24,10 @@ var AUTHORED_CONTRACT_KEYS = [
 	"description",
 	"details"
 ];
+/** An authored node, or a node of any type an author marked `authored: true`. */
+function isAuthoredOrMarked(node) {
+	return isAuthored(node) || node.attributes?.authored === true;
+}
 function stringAttr(node, key) {
 	const value = node.attributes?.[key];
 	if (typeof value !== "string") return void 0;
@@ -40,5 +44,4 @@ function authoredHeaderLabel(node, name) {
 	const kind = authoredKindLabel(node);
 	return kind ? `${kind}: ${name}` : name;
 }
-//#endregion
-export { AUTHORED_CONTRACT_KEYS, authoredHeaderLabel, authoredKindLabel, isAuthored, stringAttr };
+export { AUTHORED_CONTRACT_KEYS, authoredHeaderLabel, authoredKindLabel, isAuthored, isAuthoredOrMarked, stringAttr };

@@ -1,5 +1,5 @@
 import { __commonJSMin } from "../../../_virtual/_rolldown/runtime.mjs";
-//#region ../../node_modules/.pnpm/ajv-formats@3.0.1/node_modules/ajv-formats/dist/formats.js
+// ../../node_modules/.pnpm/ajv-formats@3.0.1/node_modules/ajv-formats/dist/formats.js
 var require_formats = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.formatNames = exports.fastFormats = exports.fullFormats = void 0;
@@ -186,6 +186,5 @@ var require_formats = /* @__PURE__ */ __commonJSMin(((exports) => {
 		}
 	}
 }));
-//#endregion
 export default require_formats();
 export { require_formats };

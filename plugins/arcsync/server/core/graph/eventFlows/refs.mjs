@@ -1,4 +1,4 @@
-//#region ../core/dist/graph/eventFlows/refs.js
+// ../core/dist/graph/eventFlows/refs.js
 /**
 * Resolving an IaC reference to a node id, and reading the two shapes an event
 * pattern arrives in. Provider-agnostic: CFN intrinsics and Terraform
@@ -63,5 +63,4 @@ function stringValues(value) {
 	if (!Array.isArray(value) || value.length === 0) return null;
 	return value.every((v) => typeof v === "string") ? value : null;
 }
-//#endregion
 export { getAttLogicalId, parsePattern, resolveCfnRef, resolveTfRef, scopedCfnRef, scopedIdMatch, stringValues };

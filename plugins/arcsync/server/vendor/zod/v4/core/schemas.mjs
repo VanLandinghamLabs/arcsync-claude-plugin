@@ -1,10 +1,10 @@
-import { aborted, allowsEval, assignProp, attachSchema, cached, cleanRegex, defineLazyInternal, esc, escapeRegex, explicitlyAborted, finalizeIssue, getEnumValues, hide, isObject, isPlainObject, issue, optionalKeys, own, prefixIssues, propertyKeyTypes, rawShape, sizeCaps } from "./util.mjs";
-import { $ZodAsyncError, $ZodEncodeError, $constructor, config, globalConfig } from "./core.mjs";
-import { anyString, boolean, cidrv4, cidrv6, cuid, cuid2, date, datetime, duration, e164, email, emoji, guid, httpProtocol, ipv4, ipv6, ksuid, nanoid, nanoidOfLength, null as _null, number, time, ulid, uuid, xid } from "./regexes.mjs";
 import { $ZodCheck, $ZodCheckNumberFormat, $ZodCheckStringFormat } from "./checks.mjs";
+import { $ZodAsyncError, $ZodEncodeError, $constructor, config, globalConfig } from "./core.mjs";
 import { Doc } from "./doc.mjs";
+import { anyString, boolean, cidrv4, cidrv6, cuid, cuid2, date, datetime, duration, e164, email, emoji, guid, httpProtocol, ipv4, ipv6, ksuid, nanoid, nanoidOfLength, null as _null, number, time, ulid, uuid, xid } from "./regexes.mjs";
+import { aborted, allowsEval, assignProp, attachSchema, cached, cleanRegex, defineLazyInternal, esc, escapeRegex, explicitlyAborted, finalizeIssue, getEnumValues, hide, isObject, isPlainObject, issue, optionalKeys, own, prefixIssues, propertyKeyTypes, rawShape, sizeCaps } from "./util.mjs";
 import { version } from "./versions.mjs";
-//#region ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v4/core/schemas.js
+// ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v4/core/schemas.js
 var $ZodType = /*@__PURE__*/ $constructor("$ZodType", (inst, def) => {
 	var _a;
 	inst ?? (inst = {});
@@ -1477,5 +1477,4 @@ function handleRefineResult(result, payload, input, inst) {
 		payload.issues.push(issue(_iss));
 	}
 }
-//#endregion
 export { $ZodArray, $ZodBase64, $ZodBase64URL, $ZodBoolean, $ZodCIDRv4, $ZodCIDRv6, $ZodCUID, $ZodCUID2, $ZodCatch, $ZodCustom, $ZodDefault, $ZodDiscriminatedUnion, $ZodE164, $ZodEmail, $ZodEmoji, $ZodEnum, $ZodExactOptional, $ZodGUID, $ZodIPv4, $ZodIPv6, $ZodISODate, $ZodISODateTime, $ZodISODuration, $ZodISOTime, $ZodIntersection, $ZodJWT, $ZodKSUID, $ZodLiteral, $ZodNanoID, $ZodNever, $ZodNonOptional, $ZodNull, $ZodNullable, $ZodNumber, $ZodNumberFormat, $ZodObject, $ZodObjectJIT, $ZodOptional, $ZodPipe, $ZodPrefault, $ZodPreprocess, $ZodReadonly, $ZodRecord, $ZodString, $ZodStringFormat, $ZodTransform, $ZodType, $ZodULID, $ZodURL, $ZodUUID, $ZodUnion, $ZodUnknown, $ZodXID, base64Charset, base64urlCharset, canParseURL, isValidBase64, isValidBase64URL, isValidCIDRv6, isValidIPv6, isValidJWT, mergeValues, parseURLObject, standardProps, stripTabAndNewline, urlHostnameOk, urlProtocolOk, validateURL };

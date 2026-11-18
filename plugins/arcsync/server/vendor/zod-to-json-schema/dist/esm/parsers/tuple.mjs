@@ -1,5 +1,5 @@
 import { parseDef } from "../parseDef.mjs";
-//#region ../../node_modules/.pnpm/zod-to-json-schema@3.25.2_zod@4.6.7/node_modules/zod-to-json-schema/dist/esm/parsers/tuple.js
+// ../../node_modules/.pnpm/zod-to-json-schema@3.25.2_zod@4.6.7/node_modules/zod-to-json-schema/dist/esm/parsers/tuple.js
 function parseTupleDef(def, refs) {
 	if (def.rest) return {
 		type: "array",
@@ -31,5 +31,4 @@ function parseTupleDef(def, refs) {
 		})).reduce((acc, x) => x === void 0 ? acc : [...acc, x], [])
 	};
 }
-//#endregion
 export { parseTupleDef };

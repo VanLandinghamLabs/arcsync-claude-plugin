@@ -1,4 +1,3 @@
-//#region package.json
-var version = "0.3.20";
-//#endregion
+// package.json
+var version = "0.3.21";
 export { version };

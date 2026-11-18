@@ -1,5 +1,5 @@
 import { members } from "./util.mjs";
-//#region ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v4/core/core.js
+// ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v4/core/core.js
 var _a;
 var _zodDesc = {
 	value: void 0,
@@ -105,5 +105,4 @@ function config(newConfig) {
 	if (newConfig) Object.assign(globalConfig, newConfig);
 	return globalConfig;
 }
-//#endregion
 export { $ZodAsyncError, $ZodEncodeError, $constructor, config, globalConfig };

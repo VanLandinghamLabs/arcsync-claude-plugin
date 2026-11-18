@@ -1,7 +1,7 @@
-import { captureStackTrace, finalizeIssue } from "./util.mjs";
 import { $ZodAsyncError, config } from "./core.mjs";
 import { $ZodRealError } from "./errors.mjs";
-//#region ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v4/core/parse.js
+import { captureStackTrace, finalizeIssue } from "./util.mjs";
+// ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v4/core/parse.js
 function finalizeParams(callee, params) {
 	return {
 		callee: params?.callee ?? callee,
@@ -207,5 +207,4 @@ var _safeEncodeAsync = (_Err) => async (schema, value, _ctx) => {
 var _safeDecodeAsync = (_Err) => async (schema, value, _ctx) => {
 	return _safeParseAsync(_Err)(schema, value, _ctx);
 };
-//#endregion
 export { _decode, _decodeAsync, _encode, _encodeAsync, _parse, _parseAsync, _safeDecode, _safeDecodeAsync, _safeEncode, _safeEncodeAsync, _safeParse, _safeParseAsync, parse, parseAsync, safeParse, safeParseAsync, validate, validateAsync };

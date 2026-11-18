@@ -1,5 +1,5 @@
 import { getDefaultOptions } from "./Options.mjs";
-//#region ../../node_modules/.pnpm/zod-to-json-schema@3.25.2_zod@4.6.7/node_modules/zod-to-json-schema/dist/esm/Refs.js
+// ../../node_modules/.pnpm/zod-to-json-schema@3.25.2_zod@4.6.7/node_modules/zod-to-json-schema/dist/esm/Refs.js
 var getRefs = (options) => {
 	const _options = getDefaultOptions(options);
 	const currentPath = _options.name !== void 0 ? [
@@ -23,5 +23,4 @@ var getRefs = (options) => {
 		}]))
 	};
 };
-//#endregion
 export { getRefs };

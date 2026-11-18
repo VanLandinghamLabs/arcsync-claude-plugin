@@ -1,7 +1,7 @@
-import { EdgeType, ResourceType } from "./types.mjs";
-import { lookupByType } from "./typeLookup.mjs";
 import { createEdgeIdMinter } from "./edgeIds.mjs";
-//#region ../core/dist/graph/groupByEngine.js
+import { lookupByType } from "./typeLookup.mjs";
+import { EdgeType, ResourceType } from "./types.mjs";
+// ../core/dist/graph/groupByEngine.js
 var ENGINE_LABEL = {
 	terraform: "Terraform",
 	cloudformation: "CloudFormation",
@@ -70,5 +70,4 @@ function groupByEngine(graph) {
 		metadata: graph.metadata
 	};
 }
-//#endregion
 export { groupByEngine };

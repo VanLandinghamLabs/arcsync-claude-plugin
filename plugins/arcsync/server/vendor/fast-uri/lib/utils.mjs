@@ -1,5 +1,5 @@
 import { __commonJSMin } from "../../../_virtual/_rolldown/runtime.mjs";
-//#region ../../node_modules/.pnpm/fast-uri@3.1.2/node_modules/fast-uri/lib/utils.js
+// ../../node_modules/.pnpm/fast-uri@3.1.2/node_modules/fast-uri/lib/utils.js
 var require_utils = /* @__PURE__ */ __commonJSMin(((exports, module) => {
 	/** @type {(value: string) => boolean} */
 	var isUUID = RegExp.prototype.test.bind(/^[\da-f]{8}-[\da-f]{4}-[\da-f]{4}-[\da-f]{4}-[\da-f]{12}$/iu);
@@ -373,6 +373,5 @@ var require_utils = /* @__PURE__ */ __commonJSMin(((exports, module) => {
 		stringArrayToHexStripped
 	};
 }));
-//#endregion
 export default require_utils();
 export { require_utils };

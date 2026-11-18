@@ -2,7 +2,7 @@ import { __commonJSMin } from "../../../../_virtual/_rolldown/runtime.mjs";
 import { require_codegen } from "../compile/codegen/index.mjs";
 import { require_util } from "../compile/util.mjs";
 import { require_names } from "../compile/names.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/vocabularies/code.js
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/vocabularies/code.js
 var require_code = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.validateUnion = exports.validateArray = exports.usePattern = exports.callValidateCode = exports.schemaProperties = exports.allSchemaProperties = exports.noPropertyInData = exports.propertyInData = exports.isOwnProperty = exports.hasPropFunc = exports.reportMissingProp = exports.checkMissingProp = exports.checkReportMissingProp = void 0;
@@ -125,6 +125,5 @@ var require_code = /* @__PURE__ */ __commonJSMin(((exports) => {
 	}
 	exports.validateUnion = validateUnion;
 }));
-//#endregion
 export default require_code();
 export { require_code };

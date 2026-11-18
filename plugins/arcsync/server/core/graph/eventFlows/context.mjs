@@ -1,5 +1,5 @@
 import { EdgeType } from "../types.mjs";
-//#region ../core/dist/graph/eventFlows/context.js
+// ../core/dist/graph/eventFlows/context.js
 var NEIGHBOR_EDGE_TYPES = /* @__PURE__ */ new Set([
 	EdgeType.REFERENCE,
 	EdgeType.IAM,
@@ -73,5 +73,4 @@ function firstBlock(value) {
 	const v = Array.isArray(value) ? value[0] : value;
 	return v != null && typeof v === "object" && !Array.isArray(v) ? v : null;
 }
-//#endregion
 export { buildNeighborIndex, consumersOf, eventsFromFilter, firstBlock, soleNeighborOfType, subscriptionBase };

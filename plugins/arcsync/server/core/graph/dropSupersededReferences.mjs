@@ -1,6 +1,6 @@
-import { EdgeType } from "./types.mjs";
 import { isFallbackProperty } from "./fallbackRail.mjs";
-//#region ../core/dist/graph/dropSupersededReferences.js
+import { EdgeType } from "./types.mjs";
+// ../core/dist/graph/dropSupersededReferences.js
 /** An unlabelled REFERENCE whose `viaProperty`, if any, names no relation of
 * its own. A Pulumi plan tags every edge with its property (#2936), so only a
 * fallback key or a CSP `connect-src` makes a tag meaningful. */
@@ -31,5 +31,4 @@ function dropSupersededReferences(graph) {
 		edges
 	};
 }
-//#endregion
 export { dropSupersededReferences, isBareReference };

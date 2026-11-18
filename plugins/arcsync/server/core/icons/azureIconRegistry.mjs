@@ -1,5 +1,5 @@
 import { ResourceType } from "../graph/types.mjs";
-//#region ../core/dist/icons/azureIconRegistry.js
+// ../core/dist/icons/azureIconRegistry.js
 var AZURE_ICON_FILENAMES = {
 	[ResourceType.AZURE_VIRTUAL_MACHINE]: "virtual-machine.svg",
 	[ResourceType.AZURE_LINUX_VM]: "virtual-machine.svg",
@@ -50,5 +50,4 @@ var AZURE_ICON_FILENAMES = {
 	[ResourceType.AZURE_RESOURCE_GROUP]: "resource-group.svg",
 	[ResourceType.AZURE_DEPLOYMENT]: "templates.svg"
 };
-//#endregion
 export { AZURE_ICON_FILENAMES };

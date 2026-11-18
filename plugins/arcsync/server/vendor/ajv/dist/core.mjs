@@ -1,16 +1,16 @@
 import { __commonJSMin, __toCommonJS } from "../../../_virtual/_rolldown/runtime.mjs";
-import { require_codegen } from "./compile/codegen/index.mjs";
-import { require_util } from "./compile/util.mjs";
-import { require_rules } from "./compile/rules.mjs";
-import { require_dataType } from "./compile/validate/dataType.mjs";
-import { require_resolve } from "./compile/resolve.mjs";
 import { require_validate } from "./compile/validate/index.mjs";
+import { require_codegen } from "./compile/codegen/index.mjs";
 import { require_validation_error } from "./runtime/validation_error.mjs";
 import { require_ref_error } from "./compile/ref_error.mjs";
+import { require_rules } from "./compile/rules.mjs";
 import { require_compile } from "./compile/index.mjs";
+import { require_resolve } from "./compile/resolve.mjs";
+import { require_dataType } from "./compile/validate/dataType.mjs";
+import { require_util } from "./compile/util.mjs";
 import { data_exports, init_data } from "./refs/data.json.mjs";
 import { require_uri } from "./runtime/uri.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/core.js
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/core.js
 var require_core = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.CodeGen = exports.Name = exports.nil = exports.stringify = exports.str = exports._ = exports.KeywordCxt = void 0;
@@ -578,6 +578,5 @@ var require_core = /* @__PURE__ */ __commonJSMin(((exports) => {
 		return { anyOf: [schema, $dataRef] };
 	}
 }));
-//#endregion
 export default require_core();
 export { require_core };

@@ -1,5 +1,5 @@
 import { ResourceType } from "../graph/types.mjs";
-//#region ../core/dist/icons/gcpIconRegistry.js
+// ../core/dist/icons/gcpIconRegistry.js
 var GCP_ICON_FILENAMES = {
 	[ResourceType.GCP_COMPUTE_INSTANCE]: "compute-engine.svg",
 	[ResourceType.GCP_CONTAINER_CLUSTER]: "gke.svg",
@@ -44,5 +44,4 @@ var GCP_ICON_FILENAMES = {
 	[ResourceType.GCP_CLOUD_BUILD_TRIGGER]: "cloud-build.svg",
 	[ResourceType.GCP_LOGGING_SINK]: "cloud-logging.svg"
 };
-//#endregion
 export { GCP_ICON_FILENAMES };

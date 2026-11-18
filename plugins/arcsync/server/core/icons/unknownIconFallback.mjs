@@ -1,5 +1,5 @@
 import { lookupByType } from "../graph/typeLookup.mjs";
-//#region ../core/dist/icons/unknownIconFallback.js
+// ../core/dist/icons/unknownIconFallback.js
 /**
 * The icon an UNKNOWN node draws instead of a bare "?", read off its raw
 * `resourceType` at display time so stored graphs need no reparse (#2861,
@@ -565,5 +565,4 @@ function namespaceIcon(raw) {
 function unknownIconSubpath(resourceType) {
 	return typeof resourceType === "string" && namespaceIcon(resourceType) || UNKNOWN_RESOURCE_ICON;
 }
-//#endregion
 export { unknownIconSubpath };

@@ -1,4 +1,4 @@
-//#region ../core/dist/graph/edgeIds.js
+// ../core/dist/graph/edgeIds.js
 /**
 * Synthetic edge-id minting, shared by every display pass that adds edges.
 *
@@ -33,5 +33,4 @@ function createEdgeIdMinter(edges) {
 		return `edge-${highest}`;
 	};
 }
-//#endregion
 export { createEdgeIdMinter };

@@ -1,5 +1,5 @@
 import { __esmMin, __exportAll } from "../../../../_virtual/_rolldown/runtime.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/refs/json-schema-draft-07.json
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/refs/json-schema-draft-07.json
 var json_schema_draft_07_exports = /* @__PURE__ */ __exportAll({
 	$id: () => $id,
 	$schema: () => $schema,
@@ -152,6 +152,5 @@ var init_json_schema_draft_07 = __esmMin((() => {
 		"default": true
 	};
 }));
-//#endregion
 init_json_schema_draft_07();
 export { $id, $schema, json_schema_draft_07_default as default, definitions, init_json_schema_draft_07, json_schema_draft_07_exports, properties, title, type };

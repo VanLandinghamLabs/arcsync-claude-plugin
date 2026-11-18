@@ -1,11 +1,11 @@
 import { __commonJSMin } from "../../../../../_virtual/_rolldown/runtime.mjs";
-import { require_codegen } from "../../compile/codegen/index.mjs";
-import { require_util } from "../../compile/util.mjs";
-import { require_names } from "../../compile/names.mjs";
-import { require_code } from "../code.mjs";
 import { require_ref_error } from "../../compile/ref_error.mjs";
+import { require_code } from "../code.mjs";
+import { require_codegen } from "../../compile/codegen/index.mjs";
+import { require_names } from "../../compile/names.mjs";
 import { require_compile } from "../../compile/index.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/vocabularies/core/ref.js
+import { require_util } from "../../compile/util.mjs";
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/vocabularies/core/ref.js
 var require_ref = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.callRef = exports.getValidate = void 0;
@@ -111,6 +111,5 @@ var require_ref = /* @__PURE__ */ __commonJSMin(((exports) => {
 	exports.callRef = callRef;
 	exports.default = def;
 }));
-//#endregion
 export default require_ref();
 export { require_ref };

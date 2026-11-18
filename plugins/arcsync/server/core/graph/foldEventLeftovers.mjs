@@ -1,8 +1,8 @@
-import { EdgeType, ResourceType, hasGraphArrays } from "./types.mjs";
-import { lookupByType } from "./typeLookup.mjs";
-import { fallbackRailFor, namesNode, railLabelFor, readAttributeEntry, referenceToken } from "./fallbackRail.mjs";
 import { railBudgetSubscribers } from "./budgetSubscribers.mjs";
-//#region ../core/dist/graph/foldEventLeftovers.js
+import { fallbackRailFor, namesNode, railLabelFor, readAttributeEntry, referenceToken } from "./fallbackRail.mjs";
+import { lookupByType } from "./typeLookup.mjs";
+import { EdgeType, ResourceType, hasGraphArrays } from "./types.mjs";
+// ../core/dist/graph/foldEventLeftovers.js
 var KIND_BY_RESOURCE_TYPE = {
 	"AWS::SNS::Subscription": "subscription",
 	aws_sns_topic_subscription: "subscription",
@@ -124,5 +124,4 @@ function foldSubscriptionsAndTargets(graph) {
 		edges: [...survivingEdges, ...minted]
 	};
 }
-//#endregion
 export { foldEventLeftovers };

@@ -2,7 +2,7 @@ import { clone, installLazyProp, normalizeParams, own } from "../core/util.mjs";
 import { $constructor } from "../core/core.mjs";
 import { parse, parseAsync, safeParse, safeParseAsync } from "../core/parse.mjs";
 import { $ZodObject, $ZodType } from "../core/schemas.mjs";
-//#region ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v4/mini/schemas.js
+// ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v4/mini/schemas.js
 var ZodMiniType = /*@__PURE__*/ $constructor("ZodMiniType", (inst, def) => {
 	if (!inst._zod) throw new Error("Uninitialized schema in ZodMiniType.");
 	$ZodType.init(inst, def);
@@ -65,5 +65,4 @@ function object(shape, params) {
 		...normalizeParams(params)
 	});
 }
-//#endregion
 export { ZodMiniObject, ZodMiniType, object };

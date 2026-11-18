@@ -1,7 +1,7 @@
-import { NUMBER_FORMAT_RANGES, codePointLength, escapeRegex, floatSafeRemainder, getLengthableOrigin, nullish } from "./util.mjs";
 import { $constructor } from "./core.mjs";
 import { lowercase, uppercase } from "./regexes.mjs";
-//#region ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v4/core/checks.js
+import { NUMBER_FORMAT_RANGES, codePointLength, escapeRegex, floatSafeRemainder, getLengthableOrigin, nullish } from "./util.mjs";
+// ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v4/core/checks.js
 var $ZodCheck = /*@__PURE__*/ $constructor("$ZodCheck", (inst, def) => {
 	var _a;
 	inst._zod ?? (inst._zod = {});
@@ -296,5 +296,4 @@ var $ZodCheckOverwrite = /*@__PURE__*/ $constructor("$ZodCheckOverwrite", (inst,
 		payload.value = def.tx(payload.value);
 	};
 });
-//#endregion
 export { $ZodCheck, $ZodCheckEndsWith, $ZodCheckGreaterThan, $ZodCheckIncludes, $ZodCheckLengthEquals, $ZodCheckLessThan, $ZodCheckLowerCase, $ZodCheckMaxLength, $ZodCheckMinLength, $ZodCheckMultipleOf, $ZodCheckNumberFormat, $ZodCheckOverwrite, $ZodCheckRegex, $ZodCheckStartsWith, $ZodCheckStringFormat, $ZodCheckUpperCase };

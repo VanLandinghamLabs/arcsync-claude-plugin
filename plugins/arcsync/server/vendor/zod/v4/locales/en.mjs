@@ -1,5 +1,5 @@
 import { joinValues, parsedType, stringifyPrimitive } from "../core/util.mjs";
-//#region ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v4/locales/en.js
+// ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v4/locales/en.js
 var error = () => {
 	const Sizable = {
 		string: {
@@ -106,5 +106,4 @@ var error = () => {
 function en_default() {
 	return { localeError: error() };
 }
-//#endregion
 export { en_default as default };

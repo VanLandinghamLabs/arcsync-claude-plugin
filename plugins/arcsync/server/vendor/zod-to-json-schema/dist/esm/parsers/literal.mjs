@@ -1,4 +1,4 @@
-//#region ../../node_modules/.pnpm/zod-to-json-schema@3.25.2_zod@4.6.7/node_modules/zod-to-json-schema/dist/esm/parsers/literal.js
+// ../../node_modules/.pnpm/zod-to-json-schema@3.25.2_zod@4.6.7/node_modules/zod-to-json-schema/dist/esm/parsers/literal.js
 function parseLiteralDef(def, refs) {
 	const parsedType = typeof def.value;
 	if (parsedType !== "bigint" && parsedType !== "number" && parsedType !== "boolean" && parsedType !== "string") return { type: Array.isArray(def.value) ? "array" : "object" };
@@ -11,5 +11,4 @@ function parseLiteralDef(def, refs) {
 		const: def.value
 	};
 }
-//#endregion
 export { parseLiteralDef };

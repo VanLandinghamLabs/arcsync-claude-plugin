@@ -3,13 +3,13 @@ import { $ZodEncodeError, $constructor, config, globalConfig } from "../core/cor
 import { validate, validateAsync } from "../core/parse.mjs";
 import { $ZodArray, $ZodBase64, $ZodBase64URL, $ZodBoolean, $ZodCIDRv4, $ZodCIDRv6, $ZodCUID, $ZodCUID2, $ZodCatch, $ZodCustom, $ZodDefault, $ZodDiscriminatedUnion, $ZodE164, $ZodEmail, $ZodEmoji, $ZodEnum, $ZodExactOptional, $ZodGUID, $ZodIPv4, $ZodIPv6, $ZodISODate, $ZodISODateTime, $ZodISODuration, $ZodISOTime, $ZodIntersection, $ZodJWT, $ZodKSUID, $ZodLiteral, $ZodNanoID, $ZodNever, $ZodNonOptional, $ZodNull, $ZodNullable, $ZodNumber, $ZodNumberFormat, $ZodObjectJIT, $ZodOptional, $ZodPipe, $ZodPrefault, $ZodPreprocess, $ZodReadonly, $ZodRecord, $ZodString, $ZodStringFormat, $ZodTransform, $ZodType, $ZodULID, $ZodURL, $ZodUUID, $ZodUnion, $ZodUnknown, $ZodXID, standardProps } from "../core/schemas.mjs";
 import { memoizer } from "../core/memoizer.mjs";
-import en_default from "../locales/en.mjs";
+import { aggregateChecks, arrayProcessor, booleanProcessor, catchProcessor, customProcessor, defaultProcessor, enumProcessor, intersectionProcessor, literalProcessor, neverProcessor, nonoptionalProcessor, nullProcessor, nullableProcessor, numberProcessor, objectProcessor, optionalProcessor, pipeProcessor, prefaultProcessor, readonlyProcessor, recordProcessor, stringProcessor, transformProcessor, unionProcessor, unknownProcessor } from "../core/json-schema-processors.mjs";
 import { globalRegistry } from "../core/registries.mjs";
 import { _array, _base64, _base64url, _boolean, _cidrv4, _cidrv6, _cuid, _cuid2, _custom, _e164, _email, _emoji, _endsWith, _gt, _gte, _guid, _includes, _int, _ipv4, _ipv6, _isoDate, _isoDateTime, _isoDuration, _isoTime, _jwt, _ksuid, _length, _lowercase, _lt, _lte, _maxLength, _minLength, _multipleOf, _nanoid, _never, _normalize, _null as _null$1, _number, _overwrite, _refine, _regex, _slugify, _startsWith, _string, _superRefine, _toLowerCase, _toUpperCase, _trim, _ulid, _unknown, _uppercase, _url, _uuid, _uuidv4, _uuidv6, _uuidv7, _xid } from "../core/api.mjs";
 import { createStandardJSONSchemaMethod, createToJSONSchemaMethod } from "../core/to-json-schema.mjs";
-import { aggregateChecks, arrayProcessor, booleanProcessor, catchProcessor, customProcessor, defaultProcessor, enumProcessor, intersectionProcessor, literalProcessor, neverProcessor, nonoptionalProcessor, nullProcessor, nullableProcessor, numberProcessor, objectProcessor, optionalProcessor, pipeProcessor, prefaultProcessor, readonlyProcessor, recordProcessor, stringProcessor, transformProcessor, unionProcessor, unknownProcessor } from "../core/json-schema-processors.mjs";
+import en_default from "../locales/en.mjs";
 import { decode, decodeAsync, encode, encodeAsync, parse, parseAsync, safeDecode, safeDecodeAsync, safeEncode, safeEncodeAsync, safeParse, safeParseAsync } from "./parse.mjs";
-//#region ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v4/classic/schemas.js
+// ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v4/classic/schemas.js
 function _ensureDefaultLocale() {
 	if (!globalConfig.localeError) config(en_default());
 }
@@ -918,5 +918,4 @@ function preprocess(fn, schema) {
 		out: schema
 	});
 }
-//#endregion
 export { ZodArray, ZodBase64, ZodBase64URL, ZodBoolean, ZodCIDRv4, ZodCIDRv6, ZodCUID, ZodCUID2, ZodCatch, ZodCustom, ZodDefault, ZodDiscriminatedUnion, ZodE164, ZodEmail, ZodEmoji, ZodEnum, ZodExactOptional, ZodGUID, ZodIPv4, ZodIPv6, ZodISODate, ZodISODateTime, ZodISODuration, ZodISOTime, ZodIntersection, ZodJWT, ZodKSUID, ZodLiteral, ZodNanoID, ZodNever, ZodNonOptional, ZodNull, ZodNullable, ZodNumber, ZodNumberFormat, ZodObject, ZodOptional, ZodPipe, ZodPrefault, ZodPreprocess, ZodReadonly, ZodRecord, ZodString, ZodStringFormat, ZodTransform, ZodType, ZodULID, ZodURL, ZodUUID, ZodUnion, ZodUnknown, ZodXID, _ZodString, _default, array, boolean, _catch as catch, custom, discriminatedUnion, _enum as enum, exactOptional, int, intersection, literal, looseObject, never, nonoptional, _null as null, nullable, number, object, optional, pipe, prefault, preprocess, readonly, record, refine, string, superRefine, transform, union, unknown };

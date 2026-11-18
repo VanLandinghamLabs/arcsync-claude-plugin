@@ -1,4 +1,4 @@
-//#region ../core/dist/authoring/diagnostics.js
+// ../core/dist/authoring/diagnostics.js
 var createDiagnostics = () => {
 	const items = [];
 	return {
@@ -35,5 +35,4 @@ var capDiagnostics = (list, { max = 200, messageChars = 300 } = {}) => {
 		...d.suggestion !== void 0 && { suggestion: clip(d.suggestion) }
 	}));
 };
-//#endregion
 export { capDiagnostics, createDiagnostics };

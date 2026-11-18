@@ -4,7 +4,7 @@ import { require_validation } from "./validation/index.mjs";
 import { require_applicator } from "./applicator/index.mjs";
 import { require_format } from "./format/index.mjs";
 import { require_metadata } from "./metadata.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/vocabularies/draft7.js
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/vocabularies/draft7.js
 var require_draft7 = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	var core_1 = require_core();
@@ -21,6 +21,5 @@ var require_draft7 = /* @__PURE__ */ __commonJSMin(((exports) => {
 		metadata_1.contentVocabulary
 	];
 }));
-//#endregion
 export default require_draft7();
 export { require_draft7 };

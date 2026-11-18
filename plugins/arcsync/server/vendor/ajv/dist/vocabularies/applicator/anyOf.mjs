@@ -1,6 +1,6 @@
 import { __commonJSMin } from "../../../../../_virtual/_rolldown/runtime.mjs";
 import { require_code } from "../code.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/vocabularies/applicator/anyOf.js
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/vocabularies/applicator/anyOf.js
 var require_anyOf = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.default = {
@@ -11,6 +11,5 @@ var require_anyOf = /* @__PURE__ */ __commonJSMin(((exports) => {
 		error: { message: "must match a schema in anyOf" }
 	};
 }));
-//#endregion
 export default require_anyOf();
 export { require_anyOf };

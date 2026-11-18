@@ -9,7 +9,7 @@ import { require_limitItems } from "./limitItems.mjs";
 import { require_uniqueItems } from "./uniqueItems.mjs";
 import { require_const } from "./const.mjs";
 import { require_enum } from "./enum.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/vocabularies/validation/index.js
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/vocabularies/validation/index.js
 var require_validation = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	var limitNumber_1 = require_limitNumber();
@@ -43,6 +43,5 @@ var require_validation = /* @__PURE__ */ __commonJSMin(((exports) => {
 		enum_1.default
 	];
 }));
-//#endregion
 export default require_validation();
 export { require_validation };

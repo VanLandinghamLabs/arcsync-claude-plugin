@@ -1,12 +1,12 @@
-import { ZodOptional } from "../../../../../zod/v4/classic/schemas.mjs";
-import { CallToolRequestSchema, CompleteRequestSchema, ErrorCode, GetPromptRequestSchema, ListPromptsRequestSchema, ListResourceTemplatesRequestSchema, ListResourcesRequestSchema, ListToolsRequestSchema, McpError, ReadResourceRequestSchema, assertCompleteRequestPrompt, assertCompleteRequestResourceTemplate } from "../types.mjs";
+import { Server } from "./index.mjs";
 import { getLiteralValue, getObjectShape, getParseErrorMessage, getSchemaDescription, isSchemaOptional, normalizeObjectSchema, objectFromShape, safeParseAsync } from "./zod-compat.mjs";
 import { toJsonSchemaCompat } from "./zod-json-schema-compat.mjs";
-import { Server } from "./index.mjs";
+import { CallToolRequestSchema, CompleteRequestSchema, ErrorCode, GetPromptRequestSchema, ListPromptsRequestSchema, ListResourceTemplatesRequestSchema, ListResourcesRequestSchema, ListToolsRequestSchema, McpError, ReadResourceRequestSchema, assertCompleteRequestPrompt, assertCompleteRequestResourceTemplate } from "../types.mjs";
 import { getCompleter, isCompletable } from "./completable.mjs";
 import { validateAndWarnToolName } from "../shared/toolNameValidation.mjs";
 import { ExperimentalMcpServerTasks } from "../experimental/tasks/mcp-server.mjs";
-//#region ../../node_modules/.pnpm/@modelcontextprotocol+sdk@1.32.2_supports-color@7.2.0_zod@4.6.7/node_modules/@modelcontextprotocol/sdk/dist/esm/server/mcp.js
+import { ZodOptional } from "../../../../../zod/v4/classic/schemas.mjs";
+// ../../node_modules/.pnpm/@modelcontextprotocol+sdk@1.32.2_supports-color@7.2.0_zod@4.6.7/node_modules/@modelcontextprotocol/sdk/dist/esm/server/mcp.js
 function toolInputElementCount(value, max) {
 	let count = 0;
 	const stack = [value];
@@ -667,5 +667,4 @@ var EMPTY_COMPLETION_RESULT = { completion: {
 	values: [],
 	hasMore: false
 } };
-//#endregion
 export { McpServer };

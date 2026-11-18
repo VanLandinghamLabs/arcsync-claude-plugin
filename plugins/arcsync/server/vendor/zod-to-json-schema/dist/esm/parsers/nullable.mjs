@@ -1,6 +1,6 @@
-import { primitiveMappings } from "./union.mjs";
 import { parseDef } from "../parseDef.mjs";
-//#region ../../node_modules/.pnpm/zod-to-json-schema@3.25.2_zod@4.6.7/node_modules/zod-to-json-schema/dist/esm/parsers/nullable.js
+import { primitiveMappings } from "./union.mjs";
+// ../../node_modules/.pnpm/zod-to-json-schema@3.25.2_zod@4.6.7/node_modules/zod-to-json-schema/dist/esm/parsers/nullable.js
 function parseNullableDef(def, refs) {
 	if ([
 		"ZodString",
@@ -39,5 +39,4 @@ function parseNullableDef(def, refs) {
 	});
 	return base && { anyOf: [base, { type: "null" }] };
 }
-//#endregion
 export { parseNullableDef };

@@ -1,5 +1,5 @@
 import { setResponseValueAndErrors } from "../errorMessages.mjs";
-//#region ../../node_modules/.pnpm/zod-to-json-schema@3.25.2_zod@4.6.7/node_modules/zod-to-json-schema/dist/esm/parsers/string.js
+// ../../node_modules/.pnpm/zod-to-json-schema@3.25.2_zod@4.6.7/node_modules/zod-to-json-schema/dist/esm/parsers/string.js
 var emojiRegex = void 0;
 /**
 * Generated from the regular expressions found here as of 2024-05-22:
@@ -261,5 +261,4 @@ function stringifyRegExpWithFlags(regex, refs) {
 	}
 	return pattern;
 }
-//#endregion
 export { parseStringDef, zodPatterns };

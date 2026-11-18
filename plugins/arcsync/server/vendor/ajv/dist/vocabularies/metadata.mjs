@@ -1,5 +1,5 @@
 import { __commonJSMin } from "../../../../_virtual/_rolldown/runtime.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/vocabularies/metadata.js
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/vocabularies/metadata.js
 var require_metadata = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.contentVocabulary = exports.metadataVocabulary = void 0;
@@ -18,6 +18,5 @@ var require_metadata = /* @__PURE__ */ __commonJSMin(((exports) => {
 		"contentSchema"
 	];
 }));
-//#endregion
 export default require_metadata();
 export { require_metadata };

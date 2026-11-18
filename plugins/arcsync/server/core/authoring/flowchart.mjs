@@ -1,5 +1,5 @@
 import { parseMeta } from "./meta.mjs";
-//#region ../core/dist/authoring/flowchart.js
+// ../core/dist/authoring/flowchart.js
 var DIRECTIONS = /* @__PURE__ */ new Map([
 	["TB", ["TB"]],
 	["TD", ["TB"]],
@@ -815,5 +815,4 @@ var parseFlowchart = (block, diags, budget = edgeBudget()) => {
 		classDefs
 	};
 };
-//#endregion
 export { MAX_AUTHORED_EDGES, edgeBudget, parseFlowchart };

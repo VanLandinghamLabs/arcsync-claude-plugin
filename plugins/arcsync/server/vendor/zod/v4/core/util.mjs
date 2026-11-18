@@ -1,5 +1,5 @@
 import { globalConfig } from "./core.mjs";
-//#region ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v4/core/util.js
+// ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v4/core/util.js
 function getEnumValues(entries) {
 	const numericValues = Object.values(entries).filter((v) => typeof v === "number");
 	return Object.entries(entries).filter(([k, _]) => numericValues.indexOf(+k) === -1).map(([_, v]) => v);
@@ -533,5 +533,4 @@ function constantCatch(value) {
 	fn[CONSTANT_CATCH] = true;
 	return fn;
 }
-//#endregion
 export { BIGINT_FORMAT_RANGES, CONSTANT_CATCH, NUMBER_FORMAT_RANGES, aborted, allowsEval, assignProp, attachSchema, cached, captureStackTrace, cleanRegex, clone, codePointLength, constantCatch, defineLazyInternal, derived, esc, escapeRegex, explicitlyAborted, extend, finalizeIssue, floatSafeRemainder, getEnumValues, getLengthableOrigin, hide, installLazyProp, isObject, isPlainObject, issue, joinValues, jsonStringifyReplacer, members, merge, mergeDefs, normalizeParams, nullish, omit, optionalKeys, own, parsedType, partial, pick, prefixIssues, propertyKeyTypes, rawShape, required, safeExtend, shallowClone, sizeCaps, slugify, stringifyPrimitive, unwrapMessage };

@@ -1,6 +1,6 @@
-import "./types.mjs";
 import "./resourceCategory.mjs";
-//#region ../core/dist/graph/resourceColors.js
+import "./types.mjs";
+// ../core/dist/graph/resourceColors.js
 /** One palette per `ResourceCategory`; `generic` draws `DEFAULT_COLOR`. */
 var CATEGORY_COLORS = {
 	networking: {
@@ -47,5 +47,4 @@ var CATEGORY_COLORS = {
 	}
 };
 CATEGORY_COLORS.networking, CATEGORY_COLORS.security;
-//#endregion
 export { CATEGORY_COLORS };

@@ -1,14 +1,15 @@
-import { EdgeType, ResourceType } from "../../graph/types.mjs";
-import { lookupByType } from "../../graph/typeLookup.mjs";
-import { iconSubpathForNode } from "../../icons/iconAssets.mjs";
-import { containerChildSets } from "../../graph/containment.mjs";
-import { apiGatewayTypeLabel } from "../../graph/stageTypes.mjs";
 import { AUTHORED_CONTRACT_KEYS, authoredHeaderLabel, isAuthored, stringAttr } from "../../graph/authored.mjs";
+import { authoredColors } from "../../graph/authoredDepth.mjs";
+import { containerChildSets } from "../../graph/containment.mjs";
 import { foldNetworkGlue } from "../../graph/foldNetworkGlue.mjs";
 import { prepare } from "../../graph/preparePipeline.mjs";
 import { CATEGORY_BY_TYPE } from "../../graph/resourceCategory.mjs";
 import { CATEGORY_COLORS } from "../../graph/resourceColors.mjs";
-//#region ../core/dist/renderers/mermaid/mermaidRenderer.js
+import { apiGatewayTypeLabel } from "../../graph/stageTypes.mjs";
+import { lookupByType } from "../../graph/typeLookup.mjs";
+import { EdgeType, ResourceType } from "../../graph/types.mjs";
+import { iconSubpathForNode } from "../../icons/iconAssets.mjs";
+// ../core/dist/renderers/mermaid/mermaidRenderer.js
 /** Exported for the infra-delta summary; the renderer's own use is unchanged. */
 var RESOURCE_DISPLAY_NAMES = {
 	[ResourceType.EC2_INSTANCE]: "EC2 Instance",
@@ -308,15 +309,16 @@ function arcsyncKind(node) {
 	const known = lookupByType(RESOURCE_DISPLAY_NAMES, node.type);
 	return known && node.type !== ResourceType.UNKNOWN ? known : node.resourceType || known;
 }
-function arcsyncProps(node) {
+function scalarEntries(attributes, skip) {
 	const props = [];
-	for (const [key, value] of Object.entries(node.attributes ?? {})) {
-		if (NON_PROP_KEYS.has(key)) continue;
+	for (const [key, value] of Object.entries(attributes ?? {})) {
+		if (skip.has(key)) continue;
 		if (typeof value === "number" && Number.isFinite(value) || typeof value === "boolean") props.push(`${metaKey(key)}: ${value}`);
 		else if (typeof value === "string" && value.length <= MAX_ARCSYNC_PROP_CHARS) props.push(`${metaKey(key)}: ${metaString(value)}`);
 	}
 	return props;
 }
+var arcsyncProps = (node) => scalarEntries(node.attributes, NON_PROP_KEYS);
 /** `["name"]@{ … }`. The bracket label is read up to the next `"` and never
 * entity-decoded, so a name it cannot carry verbatim also goes in the
 * metadata `label`, which the parser takes over the bracket. */
@@ -344,6 +346,7 @@ function arcsyncMeta(node, label) {
 		const text = stringAttr(node, key);
 		if (text) entries.push(`${key}: ${metaString(text)}`);
 	}
+	for (const [key, color] of Object.entries(authoredColors(node))) entries.push(`${key}: ${metaString(color)}`);
 	const props = arcsyncProps(node);
 	if (props.length > 0) entries.push(`props: { ${props.join(", ")} }`);
 	return entries.length > 0 ? `@{ ${entries.join(", ")} }` : "";
@@ -417,12 +420,33 @@ function renderContainer(parentId, childIds, indent, ctx) {
 	}
 	ctx.lines.push(`${indent}end`);
 }
+/** The `kind` `parseArcsync` maps back to each edge type (bundle.ts's
+* `EDGE_TYPES`, inverted). */
+var EDGE_KIND_BY_TYPE = {
+	[EdgeType.REFERENCE]: "sync",
+	[EdgeType.EVENT_FLOW]: "async",
+	[EdgeType.DEPENDENCY]: "data",
+	[EdgeType.NETWORK]: "network",
+	[EdgeType.IAM]: "iam"
+};
+var EDGE_META_SKIP = /* @__PURE__ */ new Set(["kind"]);
+/** An edge's `@{ … }` in ArcSync syntax: its kind, when the arrow style alone
+* would read back as another type, and its scalar attributes. */
+function arcsyncEdgeMeta(edge, dotted) {
+	const entries = [];
+	const kind = lookupByType(EDGE_KIND_BY_TYPE, edge.type);
+	if (kind && kind !== (dotted ? "async" : "sync")) entries.push(`kind: ${metaString(kind)}`);
+	entries.push(...scalarEntries(edge.attributes, EDGE_META_SKIP));
+	return entries.length > 0 ? `@{ ${entries.join(", ")} }` : "";
+}
 function edgeLine(edge, ids, arcsync) {
 	const source = ids.get(edge.source);
 	const target = ids.get(edge.target);
 	const text = edge.label && (arcsync ? arcsyncEdgeLabel : escapeMermaidLabel)(edge.label);
-	const label = text ? `|"${text}"|` : "";
-	const shaft = edge.type === EdgeType.EVENT_FLOW || edge.inferredCrossEngine ? "-.-" : "--";
+	const dotted = edge.type === EdgeType.EVENT_FLOW || edge.inferredCrossEngine === true;
+	const shaft = dotted ? "-.-" : "--";
+	const meta = arcsync ? arcsyncEdgeMeta(edge, dotted) : "";
+	const label = text || meta ? `|"${text || ""}"|${meta}` : "";
 	if (edge.direction === "reverse") return `  ${target} ${shaft}>${label} ${source}`;
 	return `  ${source} ${edge.direction === "bidirectional" ? "<" : ""}${shaft}>${label} ${target}`;
 }
@@ -463,5 +487,4 @@ function renderMermaid(graph, options) {
 	}
 	return `${lines.join("\n")}\n`;
 }
-//#endregion
 export { RESOURCE_DISPLAY_NAMES, mermaidNodeIds, renderMermaid };

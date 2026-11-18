@@ -1,6 +1,6 @@
 import { ReadBuffer, serializeMessage } from "../shared/stdio.mjs";
 import process from "node:process";
-//#region ../../node_modules/.pnpm/@modelcontextprotocol+sdk@1.32.2_supports-color@7.2.0_zod@4.6.7/node_modules/@modelcontextprotocol/sdk/dist/esm/server/stdio.js
+// ../../node_modules/.pnpm/@modelcontextprotocol+sdk@1.32.2_supports-color@7.2.0_zod@4.6.7/node_modules/@modelcontextprotocol/sdk/dist/esm/server/stdio.js
 /**
 * Server transport for stdio: this communicates with an MCP client by reading from the current process' stdin and writing to stdout.
 *
@@ -58,5 +58,4 @@ var StdioServerTransport = class {
 		});
 	}
 };
-//#endregion
 export { StdioServerTransport };

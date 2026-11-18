@@ -1,4 +1,4 @@
-//#region ../../node_modules/.pnpm/@modelcontextprotocol+sdk@1.32.2_supports-color@7.2.0_zod@4.6.7/node_modules/@modelcontextprotocol/sdk/dist/esm/experimental/tasks/helpers.js
+// ../../node_modules/.pnpm/@modelcontextprotocol+sdk@1.32.2_supports-color@7.2.0_zod@4.6.7/node_modules/@modelcontextprotocol/sdk/dist/esm/experimental/tasks/helpers.js
 /**
 * Experimental task capability assertion helpers.
 * WARNING: These APIs are experimental and may change without notice.
@@ -42,5 +42,4 @@ function assertClientRequestTaskCapability(requests, method, entityName) {
 		case "elicitation/create": if (!requests.elicitation?.create) throw new Error(`${entityName} does not support task creation for elicitation/create (required for ${method})`);
 	}
 }
-//#endregion
 export { assertClientRequestTaskCapability, assertToolsCallTaskCapability };

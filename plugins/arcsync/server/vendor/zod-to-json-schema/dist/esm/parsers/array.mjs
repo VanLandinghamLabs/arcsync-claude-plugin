@@ -1,7 +1,7 @@
 import { ZodFirstPartyTypeKind } from "../../../../zod/v3/types.mjs";
 import { setResponseValueAndErrors } from "../errorMessages.mjs";
 import { parseDef } from "../parseDef.mjs";
-//#region ../../node_modules/.pnpm/zod-to-json-schema@3.25.2_zod@4.6.7/node_modules/zod-to-json-schema/dist/esm/parsers/array.js
+// ../../node_modules/.pnpm/zod-to-json-schema@3.25.2_zod@4.6.7/node_modules/zod-to-json-schema/dist/esm/parsers/array.js
 function parseArrayDef(def, refs) {
 	const res = { type: "array" };
 	if (def.type?._def && def.type?._def?.typeName !== ZodFirstPartyTypeKind.ZodAny) res.items = parseDef(def.type._def, {
@@ -16,5 +16,4 @@ function parseArrayDef(def, refs) {
 	}
 	return res;
 }
-//#endregion
 export { parseArrayDef };

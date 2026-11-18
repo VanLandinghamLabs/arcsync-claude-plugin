@@ -1,8 +1,8 @@
 import { enum as _enum, number, string } from "./vendor/zod/v4/classic/schemas.mjs";
-import { canvasUrl, compact, describeResource, diagramTitle, findResource, graphAsJson, graphOf, matchesQuery, nodeRef, summarizeListItem } from "./graph.mjs";
 import { canonicalFieldsOf } from "./core/graphRead.mjs";
 import { renderMermaid } from "./core/renderers/mermaid/mermaidRenderer.mjs";
-//#region src/tools.ts
+import { canvasUrl, compact, describeResource, diagramTitle, findResource, graphAsJson, graphOf, matchesQuery, nodeRef, summarizeListItem } from "./graph.mjs";
+// src/tools.ts
 var defineTool = (def) => def;
 var asJson = (value) => JSON.stringify(value, null, 2);
 var enc = encodeURIComponent;
@@ -311,5 +311,4 @@ var TOOLS = [
 		}
 	})
 ];
-//#endregion
 export { TOOLS, defineTool, graphIdSchema };

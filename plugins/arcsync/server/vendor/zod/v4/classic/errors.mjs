@@ -1,7 +1,7 @@
-import { jsonStringifyReplacer } from "../core/util.mjs";
-import { $constructor } from "../core/core.mjs";
 import { $ZodError, flattenError, formatError } from "../core/errors.mjs";
-//#region ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v4/classic/errors.js
+import { $constructor } from "../core/core.mjs";
+import { jsonStringifyReplacer } from "../core/util.mjs";
+// ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v4/classic/errors.js
 var _installedErrorProtos = /* @__PURE__ */ new WeakSet([Object.prototype, Error.prototype]);
 function _lazyMethod(proto, key, make) {
 	Object.defineProperty(proto, key, {
@@ -50,5 +50,4 @@ var initializer = (inst, issues) => {
 	});
 };
 var ZodRealError = /*@__PURE__*/ $constructor("ZodError", initializer, void 0, { Parent: Error });
-//#endregion
 export { ZodRealError };

@@ -1,5 +1,5 @@
 import { JSONRPCMessageSchema } from "../types.mjs";
-//#region ../../node_modules/.pnpm/@modelcontextprotocol+sdk@1.32.2_supports-color@7.2.0_zod@4.6.7/node_modules/@modelcontextprotocol/sdk/dist/esm/shared/stdio.js
+// ../../node_modules/.pnpm/@modelcontextprotocol+sdk@1.32.2_supports-color@7.2.0_zod@4.6.7/node_modules/@modelcontextprotocol/sdk/dist/esm/shared/stdio.js
 var STDIO_DEFAULT_MAX_BUFFER_SIZE = 10485760;
 /**
 * Buffers a continuous stdio stream into discrete JSON-RPC messages.
@@ -33,5 +33,4 @@ function deserializeMessage(line) {
 function serializeMessage(message) {
 	return JSON.stringify(message) + "\n";
 }
-//#endregion
 export { ReadBuffer, STDIO_DEFAULT_MAX_BUFFER_SIZE, deserializeMessage, serializeMessage };

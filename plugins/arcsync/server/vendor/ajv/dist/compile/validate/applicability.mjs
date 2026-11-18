@@ -1,5 +1,5 @@
 import { __commonJSMin } from "../../../../../_virtual/_rolldown/runtime.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/compile/validate/applicability.js
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/compile/validate/applicability.js
 var require_applicability = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.shouldUseRule = exports.shouldUseGroup = exports.schemaHasRulesForType = void 0;
@@ -18,6 +18,5 @@ var require_applicability = /* @__PURE__ */ __commonJSMin(((exports) => {
 	}
 	exports.shouldUseRule = shouldUseRule;
 }));
-//#endregion
 export default require_applicability();
 export { require_applicability };

@@ -1,10 +1,10 @@
-import { ZodParsedType, getParsedType, util } from "./helpers/util.mjs";
 import { ZodError, ZodIssueCode } from "./ZodError.mjs";
-import errorMap from "./locales/en.mjs";
 import { getErrorMap } from "./errors.mjs";
-import { DIRTY, INVALID, OK, ParseStatus, addIssueToContext, isAborted, isAsync, isDirty, isValid, makeIssue } from "./helpers/parseUtil.mjs";
+import errorMap from "./locales/en.mjs";
 import { errorUtil } from "./helpers/errorUtil.mjs";
-//#region ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v3/types.js
+import { DIRTY, INVALID, OK, ParseStatus, addIssueToContext, isAborted, isAsync, isDirty, isValid, makeIssue } from "./helpers/parseUtil.mjs";
+import { ZodParsedType, getParsedType, util } from "./helpers/util.mjs";
+// ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v3/types.js
 var ParseInputLazyPath = class {
 	constructor(parent, value, path, key) {
 		this._cachedPath = [];
@@ -3163,5 +3163,4 @@ ZodOptional.create;
 ZodNullable.create;
 ZodEffects.createWithPreprocess;
 ZodPipeline.create;
-//#endregion
 export { ZodType as Schema, ZodType as ZodSchema, ZodType, ZodAny, ZodArray, ZodBigInt, ZodBoolean, ZodBranded, ZodCatch, ZodDate, ZodDefault, ZodDiscriminatedUnion, ZodEffects, ZodEffects as ZodTransformer, ZodEnum, ZodFirstPartyTypeKind, ZodFunction, ZodIntersection, ZodLazy, ZodLiteral, ZodMap, ZodNaN, ZodNativeEnum, ZodNever, ZodNull, ZodNullable, ZodNumber, ZodObject, ZodOptional, ZodPipeline, ZodPromise, ZodReadonly, ZodRecord, ZodSet, ZodString, ZodSymbol, ZodTuple, ZodUndefined, ZodUnion, ZodUnknown, ZodVoid, datetimeRegex, objectType as object };

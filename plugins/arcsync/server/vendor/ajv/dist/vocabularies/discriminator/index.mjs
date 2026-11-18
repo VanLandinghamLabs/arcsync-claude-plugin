@@ -1,10 +1,10 @@
 import { __commonJSMin } from "../../../../../_virtual/_rolldown/runtime.mjs";
 import { require_codegen } from "../../compile/codegen/index.mjs";
-import { require_util } from "../../compile/util.mjs";
-import { require_ref_error } from "../../compile/ref_error.mjs";
-import { require_compile } from "../../compile/index.mjs";
 import { require_types } from "./types.mjs";
-//#region ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/vocabularies/discriminator/index.js
+import { require_compile } from "../../compile/index.mjs";
+import { require_ref_error } from "../../compile/ref_error.mjs";
+import { require_util } from "../../compile/util.mjs";
+// ../../node_modules/.pnpm/ajv@8.20.0/node_modules/ajv/dist/vocabularies/discriminator/index.js
 var require_discriminator = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	var codegen_1 = require_codegen();
@@ -96,6 +96,5 @@ var require_discriminator = /* @__PURE__ */ __commonJSMin(((exports) => {
 		}
 	};
 }));
-//#endregion
 export default require_discriminator();
 export { require_discriminator };

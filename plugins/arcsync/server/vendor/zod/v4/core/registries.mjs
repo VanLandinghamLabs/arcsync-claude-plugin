@@ -1,4 +1,4 @@
-//#region ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v4/core/registries.js
+// ../../node_modules/.pnpm/zod@4.6.7/node_modules/zod/v4/core/registries.js
 var _a;
 var $ZodRegistry = class {
 	constructor() {
@@ -44,5 +44,4 @@ function registry() {
 }
 (_a = globalThis).__zod_globalRegistry ?? (_a.__zod_globalRegistry = registry());
 var globalRegistry = globalThis.__zod_globalRegistry;
-//#endregion
 export { $ZodRegistry, globalRegistry, registry };

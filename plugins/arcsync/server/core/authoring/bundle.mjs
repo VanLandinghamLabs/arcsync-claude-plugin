@@ -7,7 +7,7 @@ import { resolveIcon, suggestIcon } from "./icons.mjs";
 import { splitSource } from "./source.mjs";
 import { parseStateDiagram, stateBudget } from "./stateDiagram.mjs";
 import { stateAstToAsl } from "./stateToAsl.mjs";
-//#region ../core/dist/authoring/bundle.js
+// ../core/dist/authoring/bundle.js
 var MAX_AUTHORED_NODES = 2e3;
 var DIAGRAM_ID_RE = /^[a-z0-9][a-z0-9-]{0,63}$/;
 var NO_DIAGRAM_ID = "add %% diagram: <id> to the first block, or pass diagramId";
@@ -307,5 +307,4 @@ var parseArcsync = (source) => {
 		metadata
 	});
 };
-//#endregion
 export { DIAGRAM_ID_FROM_TITLE, DIAGRAM_ID_RE, MAX_AUTHORED_NODES, NO_DIAGRAM_ID, parseArcsync };

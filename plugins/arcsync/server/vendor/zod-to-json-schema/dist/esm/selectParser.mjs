@@ -11,25 +11,25 @@ import { parseEffectsDef } from "./parsers/effects.mjs";
 import { parseEnumDef } from "./parsers/enum.mjs";
 import { parseIntersectionDef } from "./parsers/intersection.mjs";
 import { parseLiteralDef } from "./parsers/literal.mjs";
-import { parseStringDef } from "./parsers/string.mjs";
-import { parseRecordDef } from "./parsers/record.mjs";
 import { parseMapDef } from "./parsers/map.mjs";
 import { parseNativeEnumDef } from "./parsers/nativeEnum.mjs";
 import { parseNeverDef } from "./parsers/never.mjs";
 import { parseNullDef } from "./parsers/null.mjs";
-import { parseUnionDef } from "./parsers/union.mjs";
 import { parseNullableDef } from "./parsers/nullable.mjs";
 import { parseNumberDef } from "./parsers/number.mjs";
 import { parseObjectDef } from "./parsers/object.mjs";
 import { parseOptionalDef } from "./parsers/optional.mjs";
 import { parsePipelineDef } from "./parsers/pipeline.mjs";
 import { parsePromiseDef } from "./parsers/promise.mjs";
+import { parseRecordDef } from "./parsers/record.mjs";
 import { parseSetDef } from "./parsers/set.mjs";
+import { parseStringDef } from "./parsers/string.mjs";
 import { parseTupleDef } from "./parsers/tuple.mjs";
 import { parseUndefinedDef } from "./parsers/undefined.mjs";
+import { parseUnionDef } from "./parsers/union.mjs";
 import { parseUnknownDef } from "./parsers/unknown.mjs";
 import { parseReadonlyDef } from "./parsers/readonly.mjs";
-//#region ../../node_modules/.pnpm/zod-to-json-schema@3.25.2_zod@4.6.7/node_modules/zod-to-json-schema/dist/esm/selectParser.js
+// ../../node_modules/.pnpm/zod-to-json-schema@3.25.2_zod@4.6.7/node_modules/zod-to-json-schema/dist/esm/selectParser.js
 var selectParser = (def, typeName, refs) => {
 	switch (typeName) {
 		case ZodFirstPartyTypeKind.ZodString: return parseStringDef(def, refs);
@@ -71,5 +71,4 @@ var selectParser = (def, typeName, refs) => {
 		default: return ((_) => void 0)(typeName);
 	}
 };
-//#endregion
 export { selectParser };

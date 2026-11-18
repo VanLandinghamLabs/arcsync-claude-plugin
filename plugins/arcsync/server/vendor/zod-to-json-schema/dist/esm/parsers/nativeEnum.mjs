@@ -1,4 +1,4 @@
-//#region ../../node_modules/.pnpm/zod-to-json-schema@3.25.2_zod@4.6.7/node_modules/zod-to-json-schema/dist/esm/parsers/nativeEnum.js
+// ../../node_modules/.pnpm/zod-to-json-schema@3.25.2_zod@4.6.7/node_modules/zod-to-json-schema/dist/esm/parsers/nativeEnum.js
 function parseNativeEnumDef(def) {
 	const object = def.values;
 	const actualValues = Object.keys(def.values).filter((key) => {
@@ -10,5 +10,4 @@ function parseNativeEnumDef(def) {
 		enum: actualValues
 	};
 }
-//#endregion
 export { parseNativeEnumDef };

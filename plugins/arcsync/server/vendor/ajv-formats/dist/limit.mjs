@@ -1,7 +1,7 @@
 import { __commonJSMin } from "../../../_virtual/_rolldown/runtime.mjs";
-import { require_codegen } from "../../ajv/dist/compile/codegen/index.mjs";
 import { require_ajv } from "../../ajv/dist/ajv.mjs";
-//#region ../../node_modules/.pnpm/ajv-formats@3.0.1/node_modules/ajv-formats/dist/limit.js
+import { require_codegen } from "../../ajv/dist/compile/codegen/index.mjs";
+// ../../node_modules/.pnpm/ajv-formats@3.0.1/node_modules/ajv-formats/dist/limit.js
 var require_limit = /* @__PURE__ */ __commonJSMin(((exports) => {
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports.formatLimitDefinition = void 0;
@@ -78,6 +78,5 @@ var require_limit = /* @__PURE__ */ __commonJSMin(((exports) => {
 	};
 	exports.default = formatLimitPlugin;
 }));
-//#endregion
 export default require_limit();
 export { require_limit };

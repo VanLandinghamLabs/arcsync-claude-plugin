@@ -1,14 +1,14 @@
 import { string } from "./vendor/zod/v4/classic/schemas.mjs";
-import { ApiError } from "./api.mjs";
+import "./core/authoring/index.mjs";
 import { EdgeType } from "./core/graph/types.mjs";
 import { capDiagnostics } from "./core/authoring/diagnostics.mjs";
 import { listIcons } from "./core/authoring/icons.mjs";
 import { MAX_SOURCE_CHARS } from "./core/authoring/source.mjs";
 import { DIAGRAM_ID_RE, NO_DIAGRAM_ID, parseArcsync } from "./core/authoring/bundle.mjs";
-import "./core/authoring/index.mjs";
+import { ApiError } from "./api.mjs";
 import { canvasUrl, compact } from "./graph.mjs";
 import { defineTool, graphIdSchema } from "./tools.mjs";
-//#region src/authoringTools.ts
+// src/authoringTools.ts
 var MAX_ICONS = 200;
 var source = string().min(1).max(MAX_SOURCE_CHARS).describe("The diagram as markdown holding ```arcsync fenced blocks (Mermaid flowchart or stateDiagram-v2 syntax with @{ } node metadata).");
 var MAX_DIAGNOSTIC_LINES = 50;
@@ -133,5 +133,4 @@ var AUTHORING_TOOLS = [
 	getDiagramSource,
 	listIconsTool
 ];
-//#endregion
 export { AUTHORING_TOOLS, getDiagramSource, listIconsTool, pushDiagram, validateDiagram };

@@ -1,7 +1,7 @@
 import { toJSONSchema } from "../../../../../zod/v4/core/json-schema-processors.mjs";
 import { getLiteralValue, getObjectShape, isZ4Schema, safeParse } from "./zod-compat.mjs";
 import { zodToJsonSchema } from "../../../../../zod-to-json-schema/dist/esm/zodToJsonSchema.mjs";
-//#region ../../node_modules/.pnpm/@modelcontextprotocol+sdk@1.32.2_supports-color@7.2.0_zod@4.6.7/node_modules/@modelcontextprotocol/sdk/dist/esm/server/zod-json-schema-compat.js
+// ../../node_modules/.pnpm/@modelcontextprotocol+sdk@1.32.2_supports-color@7.2.0_zod@4.6.7/node_modules/@modelcontextprotocol/sdk/dist/esm/server/zod-json-schema-compat.js
 function mapMiniTarget(t) {
 	if (!t) return "draft-7";
 	if (t === "jsonSchema7" || t === "draft-7") return "draft-7";
@@ -30,5 +30,4 @@ function parseWithCompat(schema, data) {
 	if (!result.success) throw result.error;
 	return result.data;
 }
-//#endregion
 export { getMethodLiteral, parseWithCompat, toJsonSchemaCompat };

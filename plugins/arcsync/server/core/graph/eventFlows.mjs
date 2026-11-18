@@ -1,10 +1,10 @@
-import { EdgeType, ResourceType, hasGraphArrays } from "./types.mjs";
-import { buildNeighborIndex, soleNeighborOfType } from "./eventFlows/context.mjs";
-import { resolveTfRef, scopedIdMatch, stringValues } from "./eventFlows/refs.mjs";
 import { deriveFromCfnRule, deriveFromSnsSubscription, deriveFromTfRule } from "./eventFlows/aws.mjs";
 import { deriveFromEventGridSubscription, deriveFromServiceBusRule } from "./eventFlows/azure.mjs";
+import { buildNeighborIndex, soleNeighborOfType } from "./eventFlows/context.mjs";
 import { deriveFromEventarcTrigger, deriveFromPubsubSubscription } from "./eventFlows/gcp.mjs";
-//#region ../core/dist/graph/eventFlows.js
+import { resolveTfRef, scopedIdMatch, stringValues } from "./eventFlows/refs.mjs";
+import { EdgeType, ResourceType, hasGraphArrays } from "./types.mjs";
+// ../core/dist/graph/eventFlows.js
 var SCHEMA_RESOURCE_TYPES = /* @__PURE__ */ new Set(["AWS::EventSchemas::Schema", "aws_schemas_schema"]);
 function schemaNameTail(name) {
 	const idx = Math.max(name.lastIndexOf("/"), name.lastIndexOf("@"));
@@ -581,5 +581,4 @@ function extractEventFlows(graph) {
 		edges
 	};
 }
-//#endregion
 export { extractEventFlows };

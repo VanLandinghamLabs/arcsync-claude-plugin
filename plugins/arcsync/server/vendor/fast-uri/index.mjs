@@ -1,7 +1,7 @@
 import { __commonJSMin } from "../../_virtual/_rolldown/runtime.mjs";
 import { require_utils } from "./lib/utils.mjs";
 import { require_schemes } from "./lib/schemes.mjs";
-//#region ../../node_modules/.pnpm/fast-uri@3.1.2/node_modules/fast-uri/index.js
+// ../../node_modules/.pnpm/fast-uri@3.1.2/node_modules/fast-uri/index.js
 var require_fast_uri = /* @__PURE__ */ __commonJSMin(((exports, module) => {
 	var { normalizeIPv6, removeDotSegments, recomposeAuthority, normalizePercentEncoding, normalizePathEncoding, escapePreservingEscapes, reescapeHostDelimiters, isIPv4, nonSimpleDomain } = require_utils();
 	var { SCHEMES, getSchemeHandler } = require_schemes();
@@ -281,6 +281,5 @@ var require_fast_uri = /* @__PURE__ */ __commonJSMin(((exports, module) => {
 	module.exports.default = fastUri;
 	module.exports.fastUri = fastUri;
 }));
-//#endregion
 export default require_fast_uri();
 export { require_fast_uri };

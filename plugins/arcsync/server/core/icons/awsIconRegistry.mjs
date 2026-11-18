@@ -1,5 +1,5 @@
 import { ResourceType } from "../graph/types.mjs";
-//#region ../core/dist/icons/awsIconRegistry.js
+// ../core/dist/icons/awsIconRegistry.js
 var AWS_ICON_FILENAMES = {
 	[ResourceType.EC2_INSTANCE]: "ec2.svg",
 	[ResourceType.LAMBDA_FUNCTION]: "lambda.svg",
@@ -86,5 +86,4 @@ var AWS_ICON_FILENAMES = {
 	[ResourceType.BACKUP_PLAN]: "backup.svg",
 	[ResourceType.BACKUP_VAULT]: "backup.svg"
 };
-//#endregion
 export { AWS_ICON_FILENAMES };
